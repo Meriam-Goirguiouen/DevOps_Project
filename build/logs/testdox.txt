@@ -1,0 +1,24 @@
+Example Database
+ [x] Model find all
+ [x] Soft delete leaves row
+
+Example Session
+ [x] Session simple
+
+Facture Model (App\Tests\Models\FactureModel)
+ [x] Find all factures
+ [x] Insert facture
+ [x] Find by id facture
+
+Health
+ [x] Is defined app path
+ [x] Base url has been set
+
+Ligne Bon Model (App\Tests\Models\LigneBonModel)
+ [x] Find all lignes bon l
+ [x] Insert lignes bon l
+
+User Model (App\Tests\Models\UserModel)
+ [x] Dind all users
+ [x] Insert user
+
