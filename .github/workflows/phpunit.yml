@@ -31,10 +31,7 @@ jobs:
           sudo apt-get install -y libxml2-dev  # Installer libxml2-dev (si nécessaire)
           composer install --no-interaction  # Installe les dépendances via Composer
 
-      # Step 4: Make PHPUnit executable and run the tests
-      - name: Make PHPUnit executable
-        run: chmod +x ./vendor/bin/phpunit  # Rendre le fichier phpunit exécutable
-
+      # Step 4: Run PHPUnit via PHP
       - name: Run PHPUnit tests
         run: |
-          ./vendor/bin/phpunit --configuration phpunit.xml.dist  # Exécute PHPUnit avec votre fichier de configuration
+          php ./vendor/bin/phpunit --configuration phpunit.xml.dist  # Exécute PHPUnit avec votre fichier de configuration
