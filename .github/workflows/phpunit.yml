@@ -13,20 +13,27 @@ jobs:
     runs-on: ubuntu-latest  # Utilise un environnement Ubuntu pour exécuter le test
 
     steps:
+      # Step 1: Checkout the repository code
       - name: Checkout repository
         uses: actions/checkout@v3  # Clone le code source du dépôt
 
+      # Step 2: Set up PHP environment
       - name: Set up PHP
         uses: shivammathur/setup-php@v2  # Utilisation de la version stable v2
         with:
-          php-version: '8.2'  # Version de PHP (corrigée pour enlever l'espace supplémentaire)
-          extensions: mbstring, xml, curl  # Si vous avez besoin d'extensions spécifiques, ajoutez-les ici
-          coverage: xdebug  # Active la couverture de code (si vous en avez besoin)
+          php-version: '8.2'  # Version de PHP
+          extensions: mbstring, xml, curl  # Extensions PHP spécifiques
+          coverage: xdebug  # Active la couverture de code avec Xdebug (si nécessaire)
 
+      # Step 3: Install dependencies using Composer
       - name: Install dependencies
         run: |
-          sudo apt-get install -y libxml2-dev
+          sudo apt-get install -y libxml2-dev  # Installer libxml2-dev (si nécessaire)
           composer install --no-interaction  # Installe les dépendances via Composer
+
+      # Step 4: Make PHPUnit executable and run the tests
+      - name: Make PHPUnit executable
+        run: chmod +x ./vendor/bin/phpunit  # Rendre le fichier phpunit exécutable
 
       - name: Run PHPUnit tests
         run: |
