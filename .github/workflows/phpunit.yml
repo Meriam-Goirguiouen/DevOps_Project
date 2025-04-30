@@ -10,28 +10,28 @@ on:
 
 jobs:
   phpunit:
-    runs-on: ubuntu-latest  # Utilise un environnement Ubuntu pour exécuter le test
+    runs-on: ubuntu-latest  # Use an Ubuntu runner
 
     steps:
-      # Step 1: Checkout the repository code
+      # 1) Check out the repo
       - name: Checkout repository
-        uses: actions/checkout@v3  # Clone le code source du dépôt
+        uses: actions/checkout@v3
 
-      # Step 2: Set up PHP environment
+      # 2) Set up PHP 8.2 with needed extensions and Xdebug for coverage
       - name: Set up PHP
-        uses: shivammathur/setup-php@v2  # Utilisation de la version stable v2
+        uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'  # Version de PHP
-          extensions: mbstring, xml, curl  # Extensions PHP spécifiques
-          coverage: xdebug  # Active la couverture de code avec Xdebug (si nécessaire)
+          php-version: '8.2'
+          extensions: mbstring, xml, curl
+          coverage: xdebug
 
-      # Step 3: Install dependencies using Composer
+      # 3) Install system deps and Composer packages
       - name: Install dependencies
         run: |
-          sudo apt-get install -y libxml2-dev  # Installer libxml2-dev (si nécessaire)
-          composer install --no-interaction  # Installe les dépendances via Composer
+          sudo apt-get update
+          sudo apt-get install -y libxml2-dev
+          composer install --no-interaction
 
-      # Step 4: Run PHPUnit via PHP
+      # 4) Run PHPUnit through PHP (bypassing execute permission issues)
       - name: Run PHPUnit tests
-        run: |
-          php ./vendor/bin/phpunit --configuration phpunit.xml.dist  # Exécute PHPUnit avec votre fichier de configuration
+        run: php ./vendor/bin/phpunit --configuration phpunit.xml.dist
