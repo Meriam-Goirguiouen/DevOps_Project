@@ -1,11 +1,6 @@
-Example Database
- [ ] Model find all
- [ ] Soft delete leaves row
-
-Example Session
- [x] Session simple
-
-Health
- [x] Is defined app path
- [x] Base url has been set
+Bon Livraison Model (App\Tests\Models\BonLivraisonModel)
+ [x] Insert bon livraison
+ [x] Find bon livraison
+ [x] Update bon livraison
+ [x] Delete bon livraison
 

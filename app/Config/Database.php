@@ -28,7 +28,7 @@ class Database extends Config
         'DSN'          => '',
         'hostname'     => 'localhost',
         'username'     => 'root',
-        'password'     => '',
+        'password'     => 'ufxjX & 0912',
         'database'     => 'devops_tp',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
@@ -164,12 +164,12 @@ class Database extends Config
      */
     public array $tests = [
         'DSN'         => '',
-        'hostname'    => '127.0.0.1',
-        'username'    => '',
-        'password'    => '',
-        'database'    => ':memory:',
-        'DBDriver'    => 'SQLite3',
-        'DBPrefix'    => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
+        'hostname'     => 'localhost',
+        'username'     => 'root',
+        'password'     => 'ufxjX & 0912',
+        'database'     => 'devops_tp',
+        'DBDriver'     => 'MySQLi',
+        'DBPrefix'     => '',
         'pConnect'    => false,
         'DBDebug'     => true,
         'charset'     => 'utf8',

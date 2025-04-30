@@ -1,0 +1,4 @@
+# Ignore environment config
+.env
+phpunit.xml.dist
+app/config/Database.php
