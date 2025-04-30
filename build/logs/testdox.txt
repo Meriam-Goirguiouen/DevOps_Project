@@ -1,11 +1,5 @@
-Example Database
- [ ] Model find all
- [ ] Soft delete leaves row
-
-Example Session
- [x] Session simple
-
-Health
- [x] Is defined app path
- [x] Base url has been set
+Ligne Facture Model (Tests\LigneFactureModel)
+ [x] Insert and find
+ [x] Get by article
+ [x] Update quantite
 
