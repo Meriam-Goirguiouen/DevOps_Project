@@ -19,7 +19,7 @@ class Database extends Config
         'password'     => '',
         'database'     => 'devops_tp',
         'DBDriver'     => 'MySQLi',
-        'DBPrefix'     => '',
+        'DBPrefix'     => 'db_',
         'pConnect'     => false,
         'DBDebug'      => true,
         'charset'      => 'utf8mb4',
