@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Tests\LigneFactureModelTest" file="C:\Users\Hatim\DevOps_Project\tests\unit\LigneFactureModelTest.php" tests="3" assertions="8" errors="0" failures="0" skipped="0" time="0.487907">
-    <testcase name="testInsertAndFind" file="C:\Users\Hatim\DevOps_Project\tests\unit\LigneFactureModelTest.php" line="10" class="Tests\LigneFactureModelTest" classname="Tests.LigneFactureModelTest" assertions="3" time="0.463475"/>
-    <testcase name="testGetByArticle" file="C:\Users\Hatim\DevOps_Project\tests\unit\LigneFactureModelTest.php" line="28" class="Tests\LigneFactureModelTest" classname="Tests.LigneFactureModelTest" assertions="2" time="0.015325"/>
-    <testcase name="testUpdateQuantite" file="C:\Users\Hatim\DevOps_Project\tests\unit\LigneFactureModelTest.php" line="46" class="Tests\LigneFactureModelTest" classname="Tests.LigneFactureModelTest" assertions="3" time="0.009106"/>
+  <testsuite name="Tests\LigneFactureModelTest" file="C:\Users\Hatim\DevOps_Project\tests\unit\LigneFactureModelTest.php" tests="3" assertions="8" errors="0" failures="0" skipped="0" time="0.059629">
+    <testcase name="testInsertAndFind" file="C:\Users\Hatim\DevOps_Project\tests\unit\LigneFactureModelTest.php" line="10" class="Tests\LigneFactureModelTest" classname="Tests.LigneFactureModelTest" assertions="3" time="0.051282"/>
+    <testcase name="testGetByArticle" file="C:\Users\Hatim\DevOps_Project\tests\unit\LigneFactureModelTest.php" line="28" class="Tests\LigneFactureModelTest" classname="Tests.LigneFactureModelTest" assertions="2" time="0.004770"/>
+    <testcase name="testUpdateQuantite" file="C:\Users\Hatim\DevOps_Project\tests\unit\LigneFactureModelTest.php" line="46" class="Tests\LigneFactureModelTest" classname="Tests.LigneFactureModelTest" assertions="3" time="0.003577"/>
   </testsuite>
 </testsuites>

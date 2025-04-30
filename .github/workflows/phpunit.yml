@@ -2,11 +2,9 @@ name: Run PHPUnit Tests
 
 on:
   push:
-    branches:
-      - test_LigneFacture
+    branches: [ test_LigneFacture ]
   pull_request:
-    branches:
-      - test_LigneFacture
+    branches: [ test_LigneFacture ]
 
 jobs:
   phpunit:
@@ -16,10 +14,9 @@ jobs:
       mysql:
         image: mysql:5.7
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'   # Allow root with empty password
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
           MYSQL_DATABASE: devops_tp
-        ports:
-          - 3306:3306
+        ports: ['3306:3306']
         options: >-
           --health-cmd="mysqladmin ping --silent"
           --health-interval=10s
@@ -27,20 +24,17 @@ jobs:
           --health-retries=3
 
     env:
+      ENVIRONMENT: testing
       CI_ENVIRONMENT: testing
-      # Tell CodeIgniter to connect to localhost with no password
-      database.default.host: localhost
+      database.default.host: 127.0.0.1
       database.default.username: root
       database.default.password: ''
       database.default.database: devops_tp
       database.default.DBDriver: MySQLi
 
     steps:
-      # 1) Check out your code
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      # 2) Install PHP and extensions
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -48,13 +42,21 @@ jobs:
           extensions: mbstring, xml, curl
           coverage: xdebug
 
-      # 3) Install your project dependencies
       - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y libxml2-dev
           composer install --no-interaction
 
-      # 4) Give PHPUnit execution via PHP (bypass chmod)
+      - name: Wait for MySQL to be ready
+        run: |
+          for i in {30..0}; do
+            mysqladmin ping -h127.0.0.1 --silent && break
+            echo 'Waiting for MySQL...'; sleep 5
+          done
+
+      - name: Run database migrations        # ← NEW STEP
+        run: php spark migrate --env testing --quiet
+
       - name: Run PHPUnit tests
         run: php ./vendor/bin/phpunit --configuration phpunit.xml.dist
