@@ -2,9 +2,11 @@ name: Run PHPUnit Tests
 
 on:
   push:
-    branches: [ test_LigneFacture ]
+    branches:
+      - test_LigneFacture
   pull_request:
-    branches: [ test_LigneFacture ]
+    branches:
+      - test_LigneFacture
 
 jobs:
   phpunit:
@@ -15,8 +17,9 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
-          MYSQL_DATABASE: devops_tp
-        ports: ['3306:3306']
+          MYSQL_DATABASE: devops_tp  # This will create the database automatically
+        ports:
+          - 3306:3306
         options: >-
           --health-cmd="mysqladmin ping --silent"
           --health-interval=10s
@@ -24,8 +27,8 @@ jobs:
           --health-retries=3
 
     env:
-      ENVIRONMENT: testing
       CI_ENVIRONMENT: testing
+      ENVIRONMENT: testing
       database.default.host: 127.0.0.1
       database.default.username: root
       database.default.password: ''
@@ -33,8 +36,11 @@ jobs:
       database.default.DBDriver: MySQLi
 
     steps:
-      - uses: actions/checkout@v3
+      # Step 1: Checkout the code
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
+      # Step 2: Set up PHP environment
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -42,12 +48,14 @@ jobs:
           extensions: mbstring, xml, curl
           coverage: xdebug
 
+      # Step 3: Install project dependencies via Composer
       - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y libxml2-dev
           composer install --no-interaction
 
+      # Step 4: Wait for MySQL to be ready
       - name: Wait for MySQL to be ready
         run: |
           for i in {30..0}; do
@@ -55,8 +63,29 @@ jobs:
             echo 'Waiting for MySQL...'; sleep 5
           done
 
-      - name: Run database migrations        # ← NEW STEP
-        run: php spark migrate --env testing --quiet
+      # Step 5: Create the necessary tables in the database
+      - name: Create test schema
+        run: |
+          mysql -h127.0.0.1 -u root <<'SQL'
+            CREATE DATABASE IF NOT EXISTS devops_tp;
+            USE devops_tp;
 
+            -- Creating db_user table with db_ prefix
+            CREATE TABLE IF NOT EXISTS db_user (
+              id INT AUTO_INCREMENT PRIMARY KEY,
+              username VARCHAR(100) NOT NULL,
+              email VARCHAR(100) NOT NULL
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+            -- Creating db_lignefacture table with db_ prefix
+            CREATE TABLE IF NOT EXISTS db_lignefacture (
+              id INT AUTO_INCREMENT PRIMARY KEY,
+              idArticle INT DEFAULT NULL,
+              Qte INT NOT NULL,
+              PU FLOAT NOT NULL
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+          SQL
+
+      # Step 6: Run PHPUnit tests
       - name: Run PHPUnit tests
         run: php ./vendor/bin/phpunit --configuration phpunit.xml.dist
