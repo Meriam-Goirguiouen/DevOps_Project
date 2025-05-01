@@ -31,3 +31,5 @@ jobs:
       - name: Run PHPUnit tests
         run: |
           ./vendor/bin/phpunit --configuration phpunit.xml.dist  # Exécute PHPUnit avec votre fichier de configuration
+      - name: Make phpunit executable
+        run: chmod +x ./vendor/bin/phpunit
