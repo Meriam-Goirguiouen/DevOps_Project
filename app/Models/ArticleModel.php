@@ -12,14 +12,17 @@ class ArticleModel extends Model
     protected $useAutoIncrement = true;
 
     protected $validationRules = [
-        'nom' => 'required',
-        'ref' => 'required|is_unique[article.ref]',
-        'qteDeStock' => 'required|integer',
+        'nom'        => 'required|max_length[255]',
+        'ref'        => 'required|max_length[50]|is_unique[article.ref]',
+        'qteDeStock' => 'required|is_natural_no_zero'
     ];
     
     protected $validationMessages = [
         'ref' => [
             'is_unique' => 'This reference already exists.',
+        ],
+        'qteDeStock' => [
+            'is_natural_no_zero' => 'The quantity in stock must be a positive number.',
         ]
         ];
 

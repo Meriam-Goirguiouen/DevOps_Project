@@ -1,6 +1,12 @@
 Article Model (App\Tests\Models\ArticleModel)
- [x] Find all articles
+ [x] Valid article insertion
+ [x] Missing fields should fail
  [x] Duplicate ref is rejected
+ [x] Update article
+ [x] Delete article
+ [x] Negative stock is rejected
+ [x] Special characters in name
+ [x] Empty ref should fail
 
 Example Database
  [x] Model find all
