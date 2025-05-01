@@ -1,33 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="C:\Users\user\Desktop\S8\DevOps_Project\phpunit.xml.dist" tests="2" assertions="0" errors="2" failures="0" skipped="0" time="0.000000">
-    <testsuite name="App" tests="2" assertions="0" errors="2" failures="0" skipped="0" time="0.000000">
-      <testsuite name="ExampleDatabaseTest" file="C:\Users\user\Desktop\S8\DevOps_Project\tests\database\ExampleDatabaseTest.php" tests="2" assertions="0" errors="2" failures="0" skipped="0" time="0.000000">
-        <testcase name="testModelFindAll" file="C:\Users\user\Desktop\S8\DevOps_Project\tests\database\ExampleDatabaseTest.php" line="17" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="0" time="0.000000">
-          <error type="CodeIgniter\Exceptions\CriticalError">ExampleDatabaseTest::testModelFindAll&#13;
-CodeIgniter\Exceptions\CriticalError: The required PHP extension "sqlite3" is not loaded. Install and enable it to use "SQLite3" driver.
-&#13;
-C:\Users\user\Desktop\S8\DevOps_Project\system\Database\Database.php:182
-C:\Users\user\Desktop\S8\DevOps_Project\system\Database\Database.php:59
-C:\Users\user\Desktop\S8\DevOps_Project\system\Database\Config.php:84
-C:\Users\user\Desktop\S8\DevOps_Project\system\Test\DatabaseTestTrait.php:82
-C:\Users\user\Desktop\S8\DevOps_Project\system\Test\DatabaseTestTrait.php:59
-C:\Users\user\Desktop\S8\DevOps_Project\system\Test\CIUnitTestCase.php:251</error>
-        </testcase>
-        <testcase name="testSoftDeleteLeavesRow" file="C:\Users\user\Desktop\S8\DevOps_Project\tests\database\ExampleDatabaseTest.php" line="28" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="0" time="0.000000">
-          <error type="CodeIgniter\Exceptions\CriticalError">ExampleDatabaseTest::testSoftDeleteLeavesRow&#13;
-CodeIgniter\Exceptions\CriticalError: The required PHP extension "sqlite3" is not loaded. Install and enable it to use "SQLite3" driver.
-&#13;
-C:\Users\user\Desktop\S8\DevOps_Project\system\Database\Database.php:182
-C:\Users\user\Desktop\S8\DevOps_Project\system\Database\Database.php:59
-C:\Users\user\Desktop\S8\DevOps_Project\system\Database\Config.php:84
-C:\Users\user\Desktop\S8\DevOps_Project\system\Test\DatabaseTestTrait.php:82
-C:\Users\user\Desktop\S8\DevOps_Project\system\Test\DatabaseTestTrait.php:59
-C:\Users\user\Desktop\S8\DevOps_Project\system\Test\CIUnitTestCase.php:251</error>
-        </testcase>
-      </testsuite>
-      <testsuite name="ExampleSessionTest" file="C:\Users\user\Desktop\S8\DevOps_Project\tests\session\ExampleSessionTest.php" tests="0" assertions="0" errors="0" failures="0" skipped="0" time="0.000000"/>
-      <testsuite name="HealthTest" file="C:\Users\user\Desktop\S8\DevOps_Project\tests\unit\HealthTest.php" tests="0" assertions="0" errors="0" failures="0" skipped="0" time="0.000000"/>
+  <testsuite name="CLI Arguments" tests="15" assertions="21" errors="0" failures="0" skipped="0" time="1.194083">
+    <testsuite name="App\Tests\Models\ArticleModelTest" file="C:\Users\user\Desktop\DevOps_Project\tests\ArticleModelTest.php" tests="8" assertions="13" errors="0" failures="0" skipped="0" time="0.670982">
+      <testcase name="testValidArticleInsertion" file="C:\Users\user\Desktop\DevOps_Project\tests\ArticleModelTest.php" line="18" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="1" time="0.376709"/>
+      <testcase name="testMissingFieldsShouldFail" file="C:\Users\user\Desktop\DevOps_Project\tests\ArticleModelTest.php" line="35" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="2" time="0.041079"/>
+      <testcase name="testDuplicateRefIsRejected" file="C:\Users\user\Desktop\DevOps_Project\tests\ArticleModelTest.php" line="47" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="2" time="0.051601"/>
+      <testcase name="testUpdateArticle" file="C:\Users\user\Desktop\DevOps_Project\tests\ArticleModelTest.php" line="62" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="1" time="0.036091"/>
+      <testcase name="testDeleteArticle" file="C:\Users\user\Desktop\DevOps_Project\tests\ArticleModelTest.php" line="90" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="1" time="0.045074"/>
+      <testcase name="testNegativeStockIsRejected" file="C:\Users\user\Desktop\DevOps_Project\tests\ArticleModelTest.php" line="103" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="3" time="0.045188"/>
+      <testcase name="testSpecialCharactersInName" file="C:\Users\user\Desktop\DevOps_Project\tests\ArticleModelTest.php" line="119" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="1" time="0.041027"/>
+      <testcase name="testEmptyRefShouldFail" file="C:\Users\user\Desktop\DevOps_Project\tests\ArticleModelTest.php" line="137" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="2" time="0.034213"/>
+    </testsuite>
+    <testsuite name="App\Tests\Models\UserModelTest" file="C:\Users\user\Desktop\DevOps_Project\tests\UserModelTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.025954">
+      <testcase name="testFindAllUsers" file="C:\Users\user\Desktop\DevOps_Project\tests\UserModelTest.php" line="8" class="App\Tests\Models\UserModelTest" classname="App.Tests.Models.UserModelTest" assertions="1" time="0.010761"/>
+      <testcase name="testInsertUser" file="C:\Users\user\Desktop\DevOps_Project\tests\UserModelTest.php" line="14" class="App\Tests\Models\UserModelTest" classname="App.Tests.Models.UserModelTest" assertions="1" time="0.015193"/>
+    </testsuite>
+    <testsuite name="ExampleDatabaseTest" file="C:\Users\user\Desktop\DevOps_Project\tests\database\ExampleDatabaseTest.php" tests="2" assertions="3" errors="0" failures="0" skipped="0" time="0.395864">
+      <testcase name="testModelFindAll" file="C:\Users\user\Desktop\DevOps_Project\tests\database\ExampleDatabaseTest.php" line="17" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="1" time="0.207244"/>
+      <testcase name="testSoftDeleteLeavesRow" file="C:\Users\user\Desktop\DevOps_Project\tests\database\ExampleDatabaseTest.php" line="28" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="2" time="0.188620"/>
+    </testsuite>
+    <testsuite name="ExampleSessionTest" file="C:\Users\user\Desktop\DevOps_Project\tests\session\ExampleSessionTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.025838">
+      <testcase name="testSessionSimple" file="C:\Users\user\Desktop\DevOps_Project\tests\session\ExampleSessionTest.php" line="10" class="ExampleSessionTest" classname="ExampleSessionTest" assertions="1" time="0.025838"/>
+    </testsuite>
+    <testsuite name="HealthTest" file="C:\Users\user\Desktop\DevOps_Project\tests\unit\HealthTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.075445">
+      <testcase name="testIsDefinedAppPath" file="C:\Users\user\Desktop\DevOps_Project\tests\unit\HealthTest.php" line="12" class="HealthTest" classname="HealthTest" assertions="1" time="0.030270"/>
+      <testcase name="testBaseUrlHasBeenSet" file="C:\Users\user\Desktop\DevOps_Project\tests\unit\HealthTest.php" line="17" class="HealthTest" classname="HealthTest" assertions="1" time="0.045175"/>
     </testsuite>
   </testsuite>
 </testsuites>
