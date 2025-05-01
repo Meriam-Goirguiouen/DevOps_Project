@@ -3,36 +3,31 @@ name: Run PHPUnit Tests
 on:
   push:
     branches:
-      - main
+      - main  # ou la branche sur laquelle vous souhaitez exécuter les tests
   pull_request:
     branches:
-      - main
+      - main  # ou la branche sur laquelle vous souhaitez exécuter les tests
 
 jobs:
   phpunit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Utilise un environnement Ubuntu pour exécuter le test
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v3  # Clone le code source du dépôt
 
       - name: Set up PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@v2  # Utilisation de la version stable v2
         with:
-          php-version: '8.2'
-          extensions: mbstring, xml, curl, dom, pdo_sqlite
-          tools: composer:v2
-          coverage: xdebug
+          php-version: '8.2'  # Version de PHP (corrigée pour enlever l'espace supplémentaire)
+          extensions: mbstring, xml, curl  # Si vous avez besoin d'extensions spécifiques, ajoutez-les ici
+          coverage: xdebug  # Active la couverture de code (si vous en avez besoin)
 
       - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist
-
-      - name: Make phpunit executable
-        run: chmod +x ./vendor/bin/phpunit
+        run: |
+          sudo apt-get install -y libxml2-dev
+          composer install --no-interaction  # Installe les dépendances via Composer
 
       - name: Run PHPUnit tests
         run: |
-          ls -la ./vendor/bin
-          ./vendor/bin/phpunit --configuration phpunit.xml.dist
+          ./vendor/bin/phpunit --configuration phpunit.xml.dist  # Exécute PHPUnit avec votre fichier de configuration
