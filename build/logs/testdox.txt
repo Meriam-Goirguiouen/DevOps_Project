@@ -4,3 +4,7 @@ Bon Livraison Model (App\Tests\Models\BonLivraisonModel)
  [x] Update bon livraison
  [x] Delete bon livraison
 
+User Model (App\Tests\Models\UserModel)
+ [x] Find all users
+ [x] Insert user
+
