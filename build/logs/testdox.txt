@@ -17,6 +17,7 @@ Health
 Ligne Bon Model (App\Tests\Models\LigneBonModel)
  [x] Find all lignes bon l
  [x] Insert lignes bon l
+ [x] Update ligne bon l
 
 User Model (App\Tests\Models\UserModel)
  [x] Dind all users
