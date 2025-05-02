@@ -16,10 +16,8 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_ROOT_PASSWORD: ""
+          MYSQL_ROOT_PASSWORD: secret123
           MYSQL_DATABASE: devops_tp
-          MYSQL_USER: root
-          MYSQL_PASSWORD: ""
         ports:
           - 3306:3306
         options: >-
