@@ -166,7 +166,7 @@ class Database extends Config
         'DSN'         => '',
         'hostname'     => 'localhost',
         'username'     => 'root',
-        'password'     => 'ufxjX & 0912',
+        'password'     => '',
         'database'     => 'devops_tp',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
