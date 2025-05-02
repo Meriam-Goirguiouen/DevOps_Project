@@ -26,7 +26,7 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => '127.0.0.1', 
+        'hostname' => '127.0.0.1',  // ou l'adresse IP de ton conteneur Docker
         'username' => 'root',
         'password' => 'secret123',
         'database' => 'devops_tp',
