@@ -3,10 +3,10 @@ name: Run PHPUnit Tests
 on:
   push:
     branches:
-      - test_LigneFacture
+      - main
   pull_request:
     branches:
-      - test_LigneFacture
+      - main
 
 jobs:
   phpunit:
