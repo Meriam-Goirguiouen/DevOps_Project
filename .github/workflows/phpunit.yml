@@ -3,35 +3,61 @@ name: Run PHPUnit Tests
 on:
   push:
     branches:
-      - main  # ou la branche sur laquelle vous souhaitez exécuter les tests
+      - main
   pull_request:
     branches:
-      - main  # ou la branche sur laquelle vous souhaitez exécuter les tests
+      - main
 
 jobs:
   phpunit:
-    runs-on: ubuntu-latest  # Utilise un environnement Ubuntu pour exécuter le test
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: secret123
+          MYSQL_DATABASE: devops_tp
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping --silent"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3  # Clone le code source du dépôt
+        uses: actions/checkout@v3
 
       - name: Set up PHP
-        uses: shivammathur/setup-php@v2  # Utilisation de la version stable v2
+        uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'  # Version de PHP (corrigée pour enlever l'espace supplémentaire)
-          extensions: mbstring, xml, curl  # Si vous avez besoin d'extensions spécifiques, ajoutez-les ici
-          coverage: xdebug  # Active la couverture de code (si vous en avez besoin)
+          php-version: '8.2'
+          extensions: mbstring, xml, curl, pdo_mysql
+          coverage: xdebug
 
       - name: Install dependencies
         run: |
           sudo apt-get install -y libxml2-dev
-          composer install --no-interaction  # Installe les dépendances via Composer
+          composer install --no-interaction
       
+      - name: Wait for MySQL to be ready
+        run: |
+          until mysqladmin ping -h"127.0.0.1" -u"user" -p"password" --silent; do
+            echo "Waiting for MySQL...";
+            sleep 2;
+          done
+
       - name: Make phpunit executable
         run: chmod +x ./vendor/bin/phpunit    
 
       - name: Run PHPUnit tests
+        env:
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_DATABASE: devops_tp
+          DB_USERNAME: root
+          DB_PASSWORD: ""
         run: |
-          ./vendor/bin/phpunit --configuration phpunit.xml.dist  # Exécute PHPUnit avec votre fichier de configuration
-
+          ./vendor/bin/phpunit --configuration phpunit.xml.dist
