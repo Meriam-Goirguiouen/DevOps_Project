@@ -26,7 +26,7 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => '127.0.0.1',  // ou l'adresse IP de ton conteneur Docker
+        'hostname' => '172.17.0.2',  // Utilise l'IP de ton conteneur Docker MySQL
         'username' => 'root',
         'password' => 'secret123',
         'database' => 'devops_tp',
@@ -155,7 +155,7 @@ class Database extends Config
      */
     public array $tests = [
         'DSN'          => '',
-        'hostname'     => '127.0.0.1',
+        'hostname'     => '172.17.0.2',  // Utilise aussi l'IP pour les tests si nécessaire
         'username'     => 'root',
         'password'     => '',
         'database'     => 'devops_tp',
