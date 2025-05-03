@@ -45,7 +45,7 @@ jobs:
         run: |
           until mysqladmin ping -h 127.0.0.1 -uroot --silent; do
             echo "Waiting for MySQL...";
-            sleep 3;
+            sleep 5;
           done
 
       - name: Install dependencies
