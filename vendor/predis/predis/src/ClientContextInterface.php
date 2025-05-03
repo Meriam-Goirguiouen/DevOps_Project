@@ -4,7 +4,11 @@
  * This file is part of the Predis package.
  *
  * (c) 2009-2020 Daniele Alessandri
+<<<<<<< HEAD
  * (c) 2021-2024 Till Krüss
+=======
+ * (c) 2021-2025 Till Krüss
+>>>>>>> main
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -44,6 +48,11 @@ use Predis\Command\Redis\Container\FunctionContainer;
 use Predis\Command\Redis\Container\Json\JSONDEBUG;
 use Predis\Command\Redis\Container\Search\FTCONFIG;
 use Predis\Command\Redis\Container\Search\FTCURSOR;
+<<<<<<< HEAD
+=======
+use Predis\Command\Redis\HGETEX;
+use Predis\Command\Redis\HSETEX;
+>>>>>>> main
 
 /**
  * Interface defining a client-side context such as a pipeline or transaction.
@@ -83,6 +92,10 @@ use Predis\Command\Redis\Container\Search\FTCURSOR;
  * @method $this bitcount(string $key, $start = null, $end = null, string $index = 'byte')
  * @method $this bitop($operation, $destkey, $key)
  * @method $this bitfield($key, $subcommand, ...$subcommandArg)
+<<<<<<< HEAD
+=======
+ * @method $this bitfield_ro(string $key, ?array $encodingOffsetMap = null)
+>>>>>>> main
  * @method $this bitpos($key, $bit, $start = null, $end = null, string $index = 'byte')
  * @method $this blmpop(int $timeout, array $keys, string $modifier = 'left', int $count = 1)
  * @method $this bzpopmax(array $keys, int $timeout)
@@ -111,6 +124,10 @@ use Predis\Command\Redis\Container\Search\FTCURSOR;
  * @method $this failover(?To $to = null, bool $abort = false, int $timeout = -1)
  * @method $this fcall(string $function, array $keys, ...$args)
  * @method $this fcall_ro(string $function, array $keys, ...$args)
+<<<<<<< HEAD
+=======
+ * @method $this ft_list()
+>>>>>>> main
  * @method $this ftaggregate(string $index, string $query, ?AggregateArguments $arguments = null)
  * @method $this ftaliasadd(string $alias, string $index)
  * @method $this ftaliasdel(string $alias)
@@ -162,7 +179,13 @@ use Predis\Command\Redis\Container\Search\FTCURSOR;
  * @method $this hpexpireat(string $key, int $unixTimeMilliseconds, array $fields, string $flag = null)
  * @method $this hpexpiretime(string $key, array $fields)
  * @method $this hget($key, $field)
+<<<<<<< HEAD
  * @method $this hgetall($key)
+=======
+ * @method $this hgetex(string $key, array $fields, string $modifier = HGETEX::NULL)
+ * @method $this hgetall($key)
+ * @method $this hgetdel(string $key, array $fields)
+>>>>>>> main
  * @method $this hincrby($key, $field, $increment)
  * @method $this hincrbyfloat($key, $field, $increment)
  * @method $this hkeys($key)
@@ -172,6 +195,10 @@ use Predis\Command\Redis\Container\Search\FTCURSOR;
  * @method $this hrandfield(string $key, int $count = 1, bool $withValues = false)
  * @method $this hscan($key, $cursor, ?array $options = null)
  * @method $this hset($key, $field, $value)
+<<<<<<< HEAD
+=======
+ * @method $this hsetex(string $key, array $fieldValueMap, string $setModifier = HSETEX::SET_NULL, string $ttlModifier = HSETEX::TTL_NULL, int|bool $ttlModifierValue = false)
+>>>>>>> main
  * @method $this hsetnx($key, $field, $value)
  * @method $this httl(string $key, array $fields)
  * @method $this hpttl(string $key, array $fields)

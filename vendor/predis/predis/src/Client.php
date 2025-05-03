@@ -4,7 +4,11 @@
  * This file is part of the Predis package.
  *
  * (c) 2009-2020 Daniele Alessandri
+<<<<<<< HEAD
  * (c) 2021-2024 Till Krüss
+=======
+ * (c) 2021-2025 Till Krüss
+>>>>>>> main
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -53,7 +57,11 @@ use Traversable;
  */
 class Client implements ClientInterface, IteratorAggregate
 {
+<<<<<<< HEAD
     public const VERSION = '2.3.0';
+=======
+    public const VERSION = '2.4.0';
+>>>>>>> main
 
     /** @var OptionsInterface */
     private $options;

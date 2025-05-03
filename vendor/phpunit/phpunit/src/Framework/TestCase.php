@@ -2445,7 +2445,11 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
 
             $methodsInvoked[] = $methodInvoked;
 
+<<<<<<< HEAD
             if (isset($t)) {
+=======
+            if (isset($t) && !$t instanceof SkippedTest) {
+>>>>>>> main
                 $emitter->{$erroredMethod}(
                     static::class,
                     $methodInvoked,

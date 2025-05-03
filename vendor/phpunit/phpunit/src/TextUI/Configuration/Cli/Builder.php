@@ -57,6 +57,10 @@ final class Builder
         'coverage-xml=',
         'path-coverage',
         'disallow-test-output',
+<<<<<<< HEAD
+=======
+        'display-all-issues',
+>>>>>>> main
         'display-incomplete',
         'display-skipped',
         'display-deprecations',
@@ -106,6 +110,10 @@ final class Builder
         'reverse-list',
         'static-backup',
         'stderr',
+<<<<<<< HEAD
+=======
+        'fail-on-all-issues',
+>>>>>>> main
         'fail-on-deprecation',
         'fail-on-phpunit-deprecation',
         'fail-on-empty-test-suite',
@@ -194,6 +202,10 @@ final class Builder
         $defaultTimeLimit                  = null;
         $disableCodeCoverageIgnore         = null;
         $disallowTestOutput                = null;
+<<<<<<< HEAD
+=======
+        $displayAllIssues                  = null;
+>>>>>>> main
         $displayIncomplete                 = null;
         $displaySkipped                    = null;
         $displayDeprecations               = null;
@@ -205,6 +217,10 @@ final class Builder
         $excludeGroups                     = null;
         $executionOrder                    = null;
         $executionOrderDefects             = null;
+<<<<<<< HEAD
+=======
+        $failOnAllIssues                   = null;
+>>>>>>> main
         $failOnDeprecation                 = null;
         $failOnPhpunitDeprecation          = null;
         $failOnEmptyTestSuite              = null;
@@ -656,6 +672,14 @@ final class Builder
 
                     break;
 
+<<<<<<< HEAD
+=======
+                case '--fail-on-all-issues':
+                    $failOnAllIssues = true;
+
+                    break;
+
+>>>>>>> main
                 case '--fail-on-deprecation':
                     $failOnDeprecation = true;
 
@@ -850,6 +874,14 @@ final class Builder
 
                     break;
 
+<<<<<<< HEAD
+=======
+                case '--display-all-issues':
+                    $displayAllIssues = true;
+
+                    break;
+
+>>>>>>> main
                 case '--display-incomplete':
                     $displayIncomplete = true;
 
@@ -1030,6 +1062,10 @@ final class Builder
             $excludeGroups,
             $executionOrder,
             $executionOrderDefects,
+<<<<<<< HEAD
+=======
+            $failOnAllIssues,
+>>>>>>> main
             $failOnDeprecation,
             $failOnPhpunitDeprecation,
             $failOnEmptyTestSuite,
@@ -1088,6 +1124,10 @@ final class Builder
             $testSuite,
             $excludeTestSuite,
             $useDefaultConfiguration,
+<<<<<<< HEAD
+=======
+            $displayAllIssues,
+>>>>>>> main
             $displayIncomplete,
             $displaySkipped,
             $displayDeprecations,

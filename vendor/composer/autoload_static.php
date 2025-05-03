@@ -3281,9 +3281,18 @@ class ComposerStaticInitdd9e855de3ed7513947806b3f70efdb9
         'Predis\\Cluster\\Hash\\CRC16' => __DIR__ . '/..' . '/predis/predis/src/Cluster/Hash/CRC16.php',
         'Predis\\Cluster\\Hash\\HashGeneratorInterface' => __DIR__ . '/..' . '/predis/predis/src/Cluster/Hash/HashGeneratorInterface.php',
         'Predis\\Cluster\\Hash\\PhpiredisCRC16' => __DIR__ . '/..' . '/predis/predis/src/Cluster/Hash/PhpiredisCRC16.php',
+<<<<<<< HEAD
         'Predis\\Cluster\\PredisStrategy' => __DIR__ . '/..' . '/predis/predis/src/Cluster/PredisStrategy.php',
         'Predis\\Cluster\\RedisStrategy' => __DIR__ . '/..' . '/predis/predis/src/Cluster/RedisStrategy.php',
         'Predis\\Cluster\\SlotMap' => __DIR__ . '/..' . '/predis/predis/src/Cluster/SlotMap.php',
+=======
+        'Predis\\Cluster\\NullSlotRange' => __DIR__ . '/..' . '/predis/predis/src/Cluster/NullSlotRange.php',
+        'Predis\\Cluster\\PredisStrategy' => __DIR__ . '/..' . '/predis/predis/src/Cluster/PredisStrategy.php',
+        'Predis\\Cluster\\RedisStrategy' => __DIR__ . '/..' . '/predis/predis/src/Cluster/RedisStrategy.php',
+        'Predis\\Cluster\\SimpleSlotMap' => __DIR__ . '/..' . '/predis/predis/src/Cluster/SimpleSlotMap.php',
+        'Predis\\Cluster\\SlotMap' => __DIR__ . '/..' . '/predis/predis/src/Cluster/SlotMap.php',
+        'Predis\\Cluster\\SlotRange' => __DIR__ . '/..' . '/predis/predis/src/Cluster/SlotRange.php',
+>>>>>>> main
         'Predis\\Cluster\\StrategyInterface' => __DIR__ . '/..' . '/predis/predis/src/Cluster/StrategyInterface.php',
         'Predis\\Collection\\Iterator\\CursorBasedIterator' => __DIR__ . '/..' . '/predis/predis/src/Collection/Iterator/CursorBasedIterator.php',
         'Predis\\Collection\\Iterator\\HashKey' => __DIR__ . '/..' . '/predis/predis/src/Collection/Iterator/HashKey.php',
@@ -3353,6 +3362,10 @@ class ComposerStaticInitdd9e855de3ed7513947806b3f70efdb9
         'Predis\\Command\\Redis\\BGSAVE' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/BGSAVE.php',
         'Predis\\Command\\Redis\\BITCOUNT' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/BITCOUNT.php',
         'Predis\\Command\\Redis\\BITFIELD' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/BITFIELD.php',
+<<<<<<< HEAD
+=======
+        'Predis\\Command\\Redis\\BITFIELD_RO' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/BITFIELD_RO.php',
+>>>>>>> main
         'Predis\\Command\\Redis\\BITOP' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/BITOP.php',
         'Predis\\Command\\Redis\\BITPOS' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/BITPOS.php',
         'Predis\\Command\\Redis\\BLMOVE' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/BLMOVE.php',
@@ -3447,6 +3460,11 @@ class ComposerStaticInitdd9e855de3ed7513947806b3f70efdb9
         'Predis\\Command\\Redis\\HEXPIRETIME' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HEXPIRETIME.php',
         'Predis\\Command\\Redis\\HGET' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HGET.php',
         'Predis\\Command\\Redis\\HGETALL' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HGETALL.php',
+<<<<<<< HEAD
+=======
+        'Predis\\Command\\Redis\\HGETDEL' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HGETDEL.php',
+        'Predis\\Command\\Redis\\HGETEX' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HGETEX.php',
+>>>>>>> main
         'Predis\\Command\\Redis\\HINCRBY' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HINCRBY.php',
         'Predis\\Command\\Redis\\HINCRBYFLOAT' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HINCRBYFLOAT.php',
         'Predis\\Command\\Redis\\HKEYS' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HKEYS.php',
@@ -3461,6 +3479,10 @@ class ComposerStaticInitdd9e855de3ed7513947806b3f70efdb9
         'Predis\\Command\\Redis\\HRANDFIELD' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HRANDFIELD.php',
         'Predis\\Command\\Redis\\HSCAN' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HSCAN.php',
         'Predis\\Command\\Redis\\HSET' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HSET.php',
+<<<<<<< HEAD
+=======
+        'Predis\\Command\\Redis\\HSETEX' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HSETEX.php',
+>>>>>>> main
         'Predis\\Command\\Redis\\HSETNX' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HSETNX.php',
         'Predis\\Command\\Redis\\HSTRLEN' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HSTRLEN.php',
         'Predis\\Command\\Redis\\HTTL' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/HTTL.php',
@@ -3597,6 +3619,10 @@ class ComposerStaticInitdd9e855de3ed7513947806b3f70efdb9
         'Predis\\Command\\Redis\\Search\\FTSYNDUMP' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/Search/FTSYNDUMP.php',
         'Predis\\Command\\Redis\\Search\\FTSYNUPDATE' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/Search/FTSYNUPDATE.php',
         'Predis\\Command\\Redis\\Search\\FTTAGVALS' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/Search/FTTAGVALS.php',
+<<<<<<< HEAD
+=======
+        'Predis\\Command\\Redis\\Search\\FT_LIST' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/Search/FT_LIST.php',
+>>>>>>> main
         'Predis\\Command\\Redis\\TDigest\\TDIGESTADD' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/TDigest/TDIGESTADD.php',
         'Predis\\Command\\Redis\\TDigest\\TDIGESTBYRANK' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/TDigest/TDIGESTBYRANK.php',
         'Predis\\Command\\Redis\\TDigest\\TDIGESTBYREVRANK' => __DIR__ . '/..' . '/predis/predis/src/Command/Redis/TDigest/TDIGESTBYREVRANK.php',

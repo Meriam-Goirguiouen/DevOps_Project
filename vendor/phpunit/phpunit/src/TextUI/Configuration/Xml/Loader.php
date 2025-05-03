@@ -876,6 +876,10 @@ final readonly class Loader
             $this->parseColumns($document),
             $this->parseColors($document),
             $this->parseBooleanAttribute($document->documentElement, 'stderr', false),
+<<<<<<< HEAD
+=======
+            $this->parseBooleanAttribute($document->documentElement, 'displayDetailsOnAllIssues', false),
+>>>>>>> main
             $this->parseBooleanAttribute($document->documentElement, 'displayDetailsOnIncompleteTests', false),
             $this->parseBooleanAttribute($document->documentElement, 'displayDetailsOnSkippedTests', false),
             $this->parseBooleanAttribute($document->documentElement, 'displayDetailsOnTestsThatTriggerDeprecations', false),
@@ -887,6 +891,10 @@ final readonly class Loader
             $requireCoverageMetadata,
             $bootstrap,
             $this->parseBooleanAttribute($document->documentElement, 'processIsolation', false),
+<<<<<<< HEAD
+=======
+            $this->parseBooleanAttribute($document->documentElement, 'failOnAllIssues', false),
+>>>>>>> main
             $this->parseBooleanAttribute($document->documentElement, 'failOnDeprecation', false),
             $this->parseBooleanAttribute($document->documentElement, 'failOnPhpunitDeprecation', false),
             $this->parseBooleanAttribute($document->documentElement, 'failOnEmptyTestSuite', false),

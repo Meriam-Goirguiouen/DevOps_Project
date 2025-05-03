@@ -16,7 +16,12 @@
         }
     ],
     "require": {
+<<<<<<< HEAD
         "php": ">=7.2"
+=======
+        "php": ">=7.2",
+        "ext-iconv": "*"
+>>>>>>> main
     },
     "provide": {
         "ext-mbstring": "*"

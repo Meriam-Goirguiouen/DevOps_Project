@@ -47,10 +47,21 @@ final class CodeCoverage
 {
     private static ?self $instance                                      = null;
     private ?\SebastianBergmann\CodeCoverage\CodeCoverage $codeCoverage = null;
+<<<<<<< HEAD
     private ?Driver $driver                                             = null;
     private bool $collecting                                            = false;
     private ?TestCase $test                                             = null;
     private ?Timer $timer                                               = null;
+=======
+
+    /**
+     * @phpstan-ignore property.internalClass
+     */
+    private ?Driver $driver  = null;
+    private bool $collecting = false;
+    private ?TestCase $test  = null;
+    private ?Timer $timer    = null;
+>>>>>>> main
 
     public static function instance(): self
     {
@@ -131,9 +142,18 @@ final class CodeCoverage
         return $this->codeCoverage;
     }
 
+<<<<<<< HEAD
     public function driver(): Driver
     {
         return $this->driver;
+=======
+    /**
+     * @return non-empty-string
+     */
+    public function driverNameAndVersion(): string
+    {
+        return $this->driver->nameAndVersion();
+>>>>>>> main
     }
 
     public function start(TestCase $test): void

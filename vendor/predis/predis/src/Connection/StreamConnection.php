@@ -4,7 +4,11 @@
  * This file is part of the Predis package.
  *
  * (c) 2009-2020 Daniele Alessandri
+<<<<<<< HEAD
  * (c) 2021-2024 Till Krüss
+=======
+ * (c) 2021-2025 Till Krüss
+>>>>>>> main
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -36,6 +40,18 @@ use Predis\Response\Status as StatusResponse;
 class StreamConnection extends AbstractConnection
 {
     /**
+<<<<<<< HEAD
+=======
+     * @param ParametersInterface $parameters
+     */
+    public function __construct(ParametersInterface $parameters)
+    {
+        parent::__construct($parameters);
+        $this->parameters->conn_uid = spl_object_hash($this);
+    }
+
+    /**
+>>>>>>> main
      * Disconnects from the server and destroys the underlying resource when the
      * garbage collector kicks in only if the connection has not been marked as
      * persistent.
@@ -105,6 +121,21 @@ class StreamConnection extends AbstractConnection
         $timeout = (isset($parameters->timeout) ? (float) $parameters->timeout : 5.0);
         $context = stream_context_create(['socket' => ['tcp_nodelay' => (bool) $parameters->tcp_nodelay]]);
 
+<<<<<<< HEAD
+=======
+        if (
+            (isset($parameters->persistent) && $parameters->persistent)
+            && (isset($parameters->conn_uid) && $parameters->conn_uid)
+        ) {
+            $conn_uid = '/' . $parameters->conn_uid;
+        } else {
+            $conn_uid = '';
+        }
+
+        // Needs to create multiple persistent connections to the same resource
+        $address = $address . $conn_uid;
+
+>>>>>>> main
         if (!$resource = @stream_socket_client($address, $errno, $errstr, $timeout, $flags, $context)) {
             $this->onConnectionError(trim($errstr), $errno);
         }
@@ -211,7 +242,15 @@ class StreamConnection extends AbstractConnection
             $options['crypto_type'] = STREAM_CRYPTO_METHOD_TLS_CLIENT;
         }
 
+<<<<<<< HEAD
         if (!stream_context_set_option($resource, ['ssl' => $options])) {
+=======
+        $context_options = function_exists('stream_context_set_options')
+            ? stream_context_set_options($resource, ['ssl' => $options])
+            : stream_context_set_option($resource, ['ssl' => $options]);
+
+        if (!$context_options) {
+>>>>>>> main
             $this->onConnectionError('Error while setting SSL context options');
         }
 

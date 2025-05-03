@@ -24,6 +24,7 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
+<<<<<<< HEAD
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
@@ -49,6 +50,25 @@ class Database extends Config
             'datetime' => 'Y-m-d H:i:s',
             'time'     => 'H:i:s',
         ],
+=======
+    public $default = [
+        'DSN'      => '',
+        'hostname' => '127.0.0.1',  // Utilise l'IP de ton conteneur Docker MySQL
+        'username' => 'root',
+        'password' => '',
+        'database' => 'devops_tp',
+        'DBDriver' => 'MySQLi',
+        'DBPrefix' => '',
+        'pConnect' => false,
+        'DBDebug'  => (ENVIRONMENT !== 'production'),
+        'cacheOn'  => false,
+        'encrypt'  => false,
+        'compress' => false,
+        'stricton' => false,
+        'failover' => [],
+        'charset'  => 'utf8mb4',
+        'save_queries' => true,
+>>>>>>> main
     ];
 
     //    /**
@@ -164,7 +184,11 @@ class Database extends Config
      */
     public array $tests = [
         'DSN'          => '',
+<<<<<<< HEAD
         'hostname'     => '127.0.0.1',
+=======
+        'hostname'     => '127.0.0.1',  
+>>>>>>> main
         'username'     => 'root',
         'password'     => '',
         'database'     => 'devops_tp',
@@ -181,6 +205,10 @@ class Database extends Config
         'failover'     => [],
         'port'         => 3306,
         'numberNative' => false,
+<<<<<<< HEAD
+=======
+        'charset'  => 'utf8mb4',
+>>>>>>> main
         'foundRows'    => false,
         'dateFormat'   => [
             'date'     => 'Y-m-d',
@@ -200,4 +228,8 @@ class Database extends Config
             $this->defaultGroup = 'tests';
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main

@@ -10,6 +10,10 @@
 namespace PHPUnit\Event;
 
 use function assert;
+<<<<<<< HEAD
+=======
+use function memory_reset_peak_usage;
+>>>>>>> main
 use PHPUnit\Event\Code\ClassMethod;
 use PHPUnit\Event\Code\ComparisonFailure;
 use PHPUnit\Event\Code\IssueTrigger\IssueTrigger;
@@ -499,6 +503,11 @@ final class DispatchingEmitter implements Emitter
      */
     public function testPrepared(Code\Test $test): void
     {
+<<<<<<< HEAD
+=======
+        memory_reset_peak_usage();
+
+>>>>>>> main
         $this->dispatcher->dispatch(
             new Test\Prepared(
                 $this->telemetryInfo(),

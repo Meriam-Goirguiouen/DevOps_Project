@@ -766,8 +766,19 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
         $job = $rendered;
     }
 
+<<<<<<< HEAD
     private function cleanupForCoverage(): RawCodeCoverageData
     {
+=======
+    /**
+     * @phpstan-ignore return.internalClass
+     */
+    private function cleanupForCoverage(): RawCodeCoverageData
+    {
+        /**
+         * @phpstan-ignore staticMethod.internalClass
+         */
+>>>>>>> main
         $coverage = RawCodeCoverageData::fromXdebugWithoutPathCoverage([]);
         $files    = $this->coverageFiles();
 
@@ -781,6 +792,12 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
             $coverage = @unserialize($buffer);
 
             if ($coverage === false) {
+<<<<<<< HEAD
+=======
+                /**
+                 * @phpstan-ignore staticMethod.internalClass
+                 */
+>>>>>>> main
                 $coverage = RawCodeCoverageData::fromXdebugWithoutPathCoverage([]);
             }
         }

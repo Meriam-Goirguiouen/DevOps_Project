@@ -113,6 +113,10 @@ final readonly class DefaultConfiguration extends Configuration
                 false,
                 false,
                 false,
+<<<<<<< HEAD
+=======
+                false,
+>>>>>>> main
                 null,
                 false,
                 false,
@@ -132,6 +136,10 @@ final readonly class DefaultConfiguration extends Configuration
                 false,
                 false,
                 false,
+<<<<<<< HEAD
+=======
+                false,
+>>>>>>> main
                 null,
                 false,
                 false,
