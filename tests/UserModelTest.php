@@ -13,7 +13,7 @@ use CodeIgniter\Model;
     }
     public function testInsertUser(){
         $model = new UserModel();
-        $data = ['name' => 'Jamila Dahi','email' => 'jd@gk.mt'];
+        $data = ['username' => 'Jamila', 'email' => 'jd@gkHHH.mt', 'password' => 'secKKKret'];
         $id = $model->insert($data);
 
         $this->assertGreaterThan(0, $id, "ID user inséré > 0");
