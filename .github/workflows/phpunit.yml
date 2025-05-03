@@ -53,9 +53,12 @@ jobs:
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
-
+     
       - name: Run PHPUnit
         run: ./vendor/bin/phpunit
+      
+      - name: Make phpunit executable
+        run: chmod +x ./vendor/bin/phpunit
         env:
           database.tests.hostname: 127.0.0.1
           database.tests.username: root
