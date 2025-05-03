@@ -5,22 +5,19 @@ namespace App\Tests\Models;
 use CodeIgniter\Test\CIUnitTestCase;
 use App\Models\PanierModel;
 
-class PanierModelTest extends CIUnitTestCase
-{
-    public function testFindAllPaniers()
-    {
-        $model = new PanierModel();
-        $paniers = $model->findAll();
-
-        $this->assertIsArray($paniers, "findAll doit retourner un tableau.");
+class PaniersModelTest extends CIUnitTestCase{
+    public function testFindAllPanier() {
+        $Pmodel = new PanierModel();
+        $pnrs = $Pmodel->findAll();
+        $this->assertIsArray($pnrs,"findAll doit retourner un tableau !");
     }
 
     public function testInsertPanier()
     {
-        $model = new PanierModel();
+       $model = new PanierModel();
 
         $data = [
-            'date_commande' => date('Y-m-d'),
+            'dateCommande' => "2025-04-22",
             'client' => 'Karima Ait Elkhir',
         ];
 
@@ -34,7 +31,7 @@ class PanierModelTest extends CIUnitTestCase
         $model = new PanierModel();
 
         $data = [
-            'date_commande' => date('Y-m-d'),
+            'dateCommande' => "2025-04-11",
             'client' => 'Test Client',
         ];
 
@@ -44,6 +41,7 @@ class PanierModelTest extends CIUnitTestCase
 
         $this->assertNotNull($panier, "Le panier inséré doit être retrouvable.");
         $this->assertEquals('Test Client', $panier['client'], "Le nom du client doit correspondre.");
-        $this->assertEquals(date('Y-m-d'), $panier['date_commande'], "La date de commande doit correspondre.");
+        $this->assertEquals("2025-04-11", $panier['dateCommande'], "La date de commande doit correspondre.");
     }
 }
+?>
