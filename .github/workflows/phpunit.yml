@@ -53,9 +53,6 @@ jobs:
         
       - name: Run Migrations
         run: php spark migrate
-
-      - name: Seed Database
-        run: php spark db:seed  
      
       - name: Run PHPUnit
         run: php ./vendor/bin/phpunit
