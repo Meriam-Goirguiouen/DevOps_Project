@@ -55,7 +55,7 @@ CREATE TABLE `bonlivrasion` (
 CREATE TABLE `facture` (
   `id` int(11) NOT NULL,
   `dateFacture` date DEFAULT NULL,
-  `client` int(11) DEFAULT NULL,
+  `client` varchar(255) DEFAULT NULL,
   `total` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
