@@ -2,11 +2,9 @@ name: Run PHPUnit Tests
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   tests:
@@ -16,6 +14,7 @@ jobs:
       DB_HOST: 127.0.0.1
       DB_USERNAME: root
       DB_PASSWORD: ""
+      DB_DATABASE: devops_tp
 
     services:
       mysql:
@@ -45,17 +44,18 @@ jobs:
         run: |
           until mysqladmin ping -h 127.0.0.1 -uroot --silent; do
             echo "Waiting for MySQL...";
-            sleep 3;
+            sleep 5;
           done
+
+      - name: Import database schema
+        run: |
+          mysql -h 127.0.0.1 -uroot devops_tp < database/devops_tp.sql
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
-        
+
       - name: Run Migrations
         run: php spark migrate
 
-      - name: Seed Database
-        run: php spark db:seed  
-     
       - name: Run PHPUnit
         run: php ./vendor/bin/phpunit
