@@ -21,9 +21,9 @@ class BonLivraison extends BaseController
     {
         $model = new BonLivraisonModel();
         $model->save([
-            'date' => $this->request->getPost('date'),
-            'client_id' => $this->request->getPost('client_id'),
-            'etat' => 'en cours',
+            'dateCommande' => $this->request->getPost('dateCommande'),
+            'idclient' => $this->request->getPost('idclient'),
+            // 'etat' => 'en cours',
         ]);
         return redirect()->to('/bonlivraison');
     }
