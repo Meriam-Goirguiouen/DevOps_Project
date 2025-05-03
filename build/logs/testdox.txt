@@ -1,3 +1,19 @@
+Article Model (App\Tests\Models\ArticleModel)
+ [x] Valid article insertion
+ [x] Missing fields should fail
+ [x] Duplicate ref is rejected
+ [x] Update article
+ [x] Delete article
+ [x] Negative stock is rejected
+ [x] Special characters in name
+ [x] Empty ref should fail
+
+Bon Livraison Model (App\Tests\Models\BonLivraisonModel)
+ [x] Insert bon livraison
+ [x] Find bon livraison
+ [x] Update bon livraison
+ [x] Delete bon livraison
+
 Example Database
  [x] Model find all
  [x] Soft delete leaves row
@@ -10,6 +26,6 @@ Health
  [x] Base url has been set
 
 User Model (App\Tests\Models\UserModel)
- [x] Dind all users
+ [x] Find all users
  [x] Insert user
 

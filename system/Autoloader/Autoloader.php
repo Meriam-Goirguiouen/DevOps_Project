@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 /**
@@ -24,6 +23,8 @@ use Config\Modules;
 use Kint;
 use Kint\Renderer\CliRenderer;
 use Kint\Renderer\RichRenderer;
+use CodeIgniter\Model;
+
 
 /**
  * An autoloader that uses both PSR4 autoloading, and traditional classmaps.
