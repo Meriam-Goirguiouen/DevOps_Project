@@ -55,11 +55,9 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-suggest
      
       - name: Run PHPUnit
-        run: ./vendor/bin/phpunit
+        run: php ./vendor/bin/phpunit
       
-      - name: Make phpunit executable
-        run: chmod +x ./vendor/bin/phpunit
         env:
-          database.tests.hostname: 127.0.0.1
-          database.tests.username: root
-          database.tests.password: 
+          DB_HOST: 127.0.0.1
+          DB_USERNAME: root
+          DB_PASSWORD: 
