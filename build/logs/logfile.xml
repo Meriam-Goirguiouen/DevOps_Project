@@ -1,37 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="C:\xampp\htdocs\DevOps_P\phpunit.xml" tests="19" assertions="29" errors="0" failures="0" skipped="0" time="3.549126">
-    <testsuite name="App" tests="19" assertions="29" errors="0" failures="0" skipped="0" time="3.549126">
-      <testsuite name="App\Tests\Models\ArticleModelTest" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" tests="8" assertions="13" errors="0" failures="0" skipped="0" time="2.422457">
-        <testcase name="testValidArticleInsertion" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="18" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="1" time="2.018842"/>
-        <testcase name="testMissingFieldsShouldFail" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="35" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="2" time="0.199937"/>
-        <testcase name="testDuplicateRefIsRejected" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="47" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="2" time="0.026014"/>
-        <testcase name="testUpdateArticle" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="62" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="1" time="0.045094"/>
-        <testcase name="testDeleteArticle" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="87" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="1" time="0.066218"/>
-        <testcase name="testNegativeStockIsRejected" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="100" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="3" time="0.045668"/>
-        <testcase name="testSpecialCharactersInName" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="115" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="1" time="0.014387"/>
-        <testcase name="testEmptyRefShouldFail" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="133" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="2" time="0.006297"/>
+<<<<<<< HEAD
+  <testsuite name="C:\xampp\htdocs\DevOps_P\phpunit.xml.dist" tests="13" assertions="20" errors="0" failures="0" skipped="0" time="0.909578">
+    <testsuite name="App" tests="13" assertions="20" errors="0" failures="0" skipped="0" time="0.909578">
+      <testsuite name="App\Tests\Models\FactureModelTest" file="C:\xampp\htdocs\DevOps_P\tests\FactureModelTest.php" tests="3" assertions="6" errors="0" failures="0" skipped="0" time="0.159947">
+        <testcase name="testFindAllFactures" file="C:\xampp\htdocs\DevOps_P\tests\FactureModelTest.php" line="9" class="App\Tests\Models\FactureModelTest" classname="App.Tests.Models.FactureModelTest" assertions="1" time="0.112595"/>
+        <testcase name="testInsertFacture" file="C:\xampp\htdocs\DevOps_P\tests\FactureModelTest.php" line="16" class="App\Tests\Models\FactureModelTest" classname="App.Tests.Models.FactureModelTest" assertions="1" time="0.024095"/>
+        <testcase name="testFindByIdFacture" file="C:\xampp\htdocs\DevOps_P\tests\FactureModelTest.php" line="28" class="App\Tests\Models\FactureModelTest" classname="App.Tests.Models.FactureModelTest" assertions="4" time="0.023256"/>
       </testsuite>
-      <testsuite name="App\Tests\Models\BonLivraisonModelTest" file="C:\xampp\htdocs\DevOps_P\tests\BonLivraisonModelTest.php" tests="4" assertions="8" errors="0" failures="0" skipped="0" time="0.170234">
-        <testcase name="testInsertBonLivraison" file="C:\xampp\htdocs\DevOps_P\tests\BonLivraisonModelTest.php" line="18" class="App\Tests\Models\BonLivraisonModelTest" classname="App.Tests.Models.BonLivraisonModelTest" assertions="2" time="0.061456"/>
-        <testcase name="testFindBonLivraison" file="C:\xampp\htdocs\DevOps_P\tests\BonLivraisonModelTest.php" line="31" class="App\Tests\Models\BonLivraisonModelTest" classname="App.Tests.Models.BonLivraisonModelTest" assertions="3" time="0.062221"/>
-        <testcase name="testUpdateBonLivraison" file="C:\xampp\htdocs\DevOps_P\tests\BonLivraisonModelTest.php" line="47" class="App\Tests\Models\BonLivraisonModelTest" classname="App.Tests.Models.BonLivraisonModelTest" assertions="2" time="0.021157"/>
-        <testcase name="testDeleteBonLivraison" file="C:\xampp\htdocs\DevOps_P\tests\BonLivraisonModelTest.php" line="63" class="App\Tests\Models\BonLivraisonModelTest" classname="App.Tests.Models.BonLivraisonModelTest" assertions="1" time="0.025401"/>
+      <testsuite name="App\Tests\Models\LigneBonModelTest" file="C:\xampp\htdocs\DevOps_P\tests\LigneBonModelTest.php" tests="3" assertions="6" errors="0" failures="0" skipped="0" time="0.052132">
+        <testcase name="testFindAllLignesBonL" file="C:\xampp\htdocs\DevOps_P\tests\LigneBonModelTest.php" line="9" class="App\Tests\Models\LigneBonModelTest" classname="App.Tests.Models.LigneBonModelTest" assertions="1" time="0.003204"/>
+        <testcase name="testInsertLignesBonL" file="C:\xampp\htdocs\DevOps_P\tests\LigneBonModelTest.php" line="15" class="App\Tests\Models\LigneBonModelTest" classname="App.Tests.Models.LigneBonModelTest" assertions="1" time="0.005454"/>
+        <testcase name="testUpdateLigneBonL" file="C:\xampp\htdocs\DevOps_P\tests\LigneBonModelTest.php" line="22" class="App\Tests\Models\LigneBonModelTest" classname="App.Tests.Models.LigneBonModelTest" assertions="4" time="0.043474"/>
       </testsuite>
-      <testsuite name="App\Tests\Models\UserModelTest" file="C:\xampp\htdocs\DevOps_P\tests\UserModelTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.012932">
-        <testcase name="testFindAllUsers" file="C:\xampp\htdocs\DevOps_P\tests\UserModelTest.php" line="8" class="App\Tests\Models\UserModelTest" classname="App.Tests.Models.UserModelTest" assertions="1" time="0.004008"/>
-        <testcase name="testInsertUser" file="C:\xampp\htdocs\DevOps_P\tests\UserModelTest.php" line="14" class="App\Tests\Models\UserModelTest" classname="App.Tests.Models.UserModelTest" assertions="1" time="0.008924"/>
+      <testsuite name="App\Tests\Models\UserModelTest" file="C:\xampp\htdocs\DevOps_P\tests\UserModelTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.010741">
+        <testcase name="testDindAllUsers" file="C:\xampp\htdocs\DevOps_P\tests\UserModelTest.php" line="7" class="App\Tests\Models\UserModelTest" classname="App.Tests.Models.UserModelTest" assertions="1" time="0.002780"/>
+        <testcase name="testInsertUser" file="C:\xampp\htdocs\DevOps_P\tests\UserModelTest.php" line="13" class="App\Tests\Models\UserModelTest" classname="App.Tests.Models.UserModelTest" assertions="1" time="0.007961"/>
       </testsuite>
-      <testsuite name="ExampleDatabaseTest" file="C:\xampp\htdocs\DevOps_P\tests\database\ExampleDatabaseTest.php" tests="2" assertions="3" errors="0" failures="0" skipped="0" time="0.863376">
-        <testcase name="testModelFindAll" file="C:\xampp\htdocs\DevOps_P\tests\database\ExampleDatabaseTest.php" line="17" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="1" time="0.627583"/>
-        <testcase name="testSoftDeleteLeavesRow" file="C:\xampp\htdocs\DevOps_P\tests\database\ExampleDatabaseTest.php" line="28" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="2" time="0.235793"/>
+      <testsuite name="ExampleDatabaseTest" file="C:\xampp\htdocs\DevOps_P\tests\database\ExampleDatabaseTest.php" tests="2" assertions="3" errors="0" failures="0" skipped="0" time="0.616723">
+        <testcase name="testModelFindAll" file="C:\xampp\htdocs\DevOps_P\tests\database\ExampleDatabaseTest.php" line="17" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="1" time="0.410669"/>
+        <testcase name="testSoftDeleteLeavesRow" file="C:\xampp\htdocs\DevOps_P\tests\database\ExampleDatabaseTest.php" line="28" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="2" time="0.206055"/>
       </testsuite>
-      <testsuite name="ExampleSessionTest" file="C:\xampp\htdocs\DevOps_P\tests\session\ExampleSessionTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.044804">
-        <testcase name="testSessionSimple" file="C:\xampp\htdocs\DevOps_P\tests\session\ExampleSessionTest.php" line="10" class="ExampleSessionTest" classname="ExampleSessionTest" assertions="1" time="0.044804"/>
+      <testsuite name="ExampleSessionTest" file="C:\xampp\htdocs\DevOps_P\tests\session\ExampleSessionTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.005022">
+        <testcase name="testSessionSimple" file="C:\xampp\htdocs\DevOps_P\tests\session\ExampleSessionTest.php" line="10" class="ExampleSessionTest" classname="ExampleSessionTest" assertions="1" time="0.005022"/>
       </testsuite>
-      <testsuite name="HealthTest" file="C:\xampp\htdocs\DevOps_P\tests\unit\HealthTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.035323">
-        <testcase name="testIsDefinedAppPath" file="C:\xampp\htdocs\DevOps_P\tests\unit\HealthTest.php" line="12" class="HealthTest" classname="HealthTest" assertions="1" time="0.001811"/>
-        <testcase name="testBaseUrlHasBeenSet" file="C:\xampp\htdocs\DevOps_P\tests\unit\HealthTest.php" line="17" class="HealthTest" classname="HealthTest" assertions="1" time="0.033511"/>
+      <testsuite name="HealthTest" file="C:\xampp\htdocs\DevOps_P\tests\unit\HealthTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.065013">
+        <testcase name="testIsDefinedAppPath" file="C:\xampp\htdocs\DevOps_P\tests\unit\HealthTest.php" line="12" class="HealthTest" classname="HealthTest" assertions="1" time="0.004573"/>
+        <testcase name="testBaseUrlHasBeenSet" file="C:\xampp\htdocs\DevOps_P\tests\unit\HealthTest.php" line="17" class="HealthTest" classname="HealthTest" assertions="1" time="0.060440"/>
+=======
+  <testsuite name="C:\xampp\htdocs\DevOps_P\phpunit.xml" tests="19" assertions="29" errors="0" failures="0" skipped="0" time="1.030608">
+    <testsuite name="App" tests="19" assertions="29" errors="0" failures="0" skipped="0" time="1.030608">
+      <testsuite name="App\Tests\Models\ArticleModelTest" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" tests="8" assertions="13" errors="0" failures="0" skipped="0" time="0.388324">
+        <testcase name="testValidArticleInsertion" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="18" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="1" time="0.240701"/>
+        <testcase name="testMissingFieldsShouldFail" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="35" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="2" time="0.032195"/>
+        <testcase name="testDuplicateRefIsRejected" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="47" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="2" time="0.020579"/>
+        <testcase name="testUpdateArticle" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="62" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="1" time="0.025850"/>
+        <testcase name="testDeleteArticle" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="87" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="1" time="0.038555"/>
+        <testcase name="testNegativeStockIsRejected" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="100" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="3" time="0.011012"/>
+        <testcase name="testSpecialCharactersInName" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="115" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="1" time="0.015151"/>
+        <testcase name="testEmptyRefShouldFail" file="C:\xampp\htdocs\DevOps_P\tests\ArticleModelTest.php" line="133" class="App\Tests\Models\ArticleModelTest" classname="App.Tests.Models.ArticleModelTest" assertions="2" time="0.004281"/>
+      </testsuite>
+      <testsuite name="App\Tests\Models\BonLivraisonModelTest" file="C:\xampp\htdocs\DevOps_P\tests\BonLivraisonModelTest.php" tests="4" assertions="8" errors="0" failures="0" skipped="0" time="0.079906">
+        <testcase name="testInsertBonLivraison" file="C:\xampp\htdocs\DevOps_P\tests\BonLivraisonModelTest.php" line="18" class="App\Tests\Models\BonLivraisonModelTest" classname="App.Tests.Models.BonLivraisonModelTest" assertions="2" time="0.016358"/>
+        <testcase name="testFindBonLivraison" file="C:\xampp\htdocs\DevOps_P\tests\BonLivraisonModelTest.php" line="31" class="App\Tests\Models\BonLivraisonModelTest" classname="App.Tests.Models.BonLivraisonModelTest" assertions="3" time="0.019117"/>
+        <testcase name="testUpdateBonLivraison" file="C:\xampp\htdocs\DevOps_P\tests\BonLivraisonModelTest.php" line="47" class="App\Tests\Models\BonLivraisonModelTest" classname="App.Tests.Models.BonLivraisonModelTest" assertions="2" time="0.022329"/>
+        <testcase name="testDeleteBonLivraison" file="C:\xampp\htdocs\DevOps_P\tests\BonLivraisonModelTest.php" line="63" class="App\Tests\Models\BonLivraisonModelTest" classname="App.Tests.Models.BonLivraisonModelTest" assertions="1" time="0.022102"/>
+      </testsuite>
+      <testsuite name="App\Tests\Models\UserModelTest" file="C:\xampp\htdocs\DevOps_P\tests\UserModelTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.011001">
+        <testcase name="testFindAllUsers" file="C:\xampp\htdocs\DevOps_P\tests\UserModelTest.php" line="8" class="App\Tests\Models\UserModelTest" classname="App.Tests.Models.UserModelTest" assertions="1" time="0.004446"/>
+        <testcase name="testInsertUser" file="C:\xampp\htdocs\DevOps_P\tests\UserModelTest.php" line="14" class="App\Tests\Models\UserModelTest" classname="App.Tests.Models.UserModelTest" assertions="1" time="0.006555"/>
+      </testsuite>
+      <testsuite name="ExampleDatabaseTest" file="C:\xampp\htdocs\DevOps_P\tests\database\ExampleDatabaseTest.php" tests="2" assertions="3" errors="0" failures="0" skipped="0" time="0.539922">
+        <testcase name="testModelFindAll" file="C:\xampp\htdocs\DevOps_P\tests\database\ExampleDatabaseTest.php" line="17" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="1" time="0.290586"/>
+        <testcase name="testSoftDeleteLeavesRow" file="C:\xampp\htdocs\DevOps_P\tests\database\ExampleDatabaseTest.php" line="28" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="2" time="0.249335"/>
+      </testsuite>
+      <testsuite name="ExampleSessionTest" file="C:\xampp\htdocs\DevOps_P\tests\session\ExampleSessionTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.005154">
+        <testcase name="testSessionSimple" file="C:\xampp\htdocs\DevOps_P\tests\session\ExampleSessionTest.php" line="10" class="ExampleSessionTest" classname="ExampleSessionTest" assertions="1" time="0.005154"/>
+      </testsuite>
+      <testsuite name="HealthTest" file="C:\xampp\htdocs\DevOps_P\tests\unit\HealthTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.006302">
+        <testcase name="testIsDefinedAppPath" file="C:\xampp\htdocs\DevOps_P\tests\unit\HealthTest.php" line="12" class="HealthTest" classname="HealthTest" assertions="1" time="0.002675"/>
+        <testcase name="testBaseUrlHasBeenSet" file="C:\xampp\htdocs\DevOps_P\tests\unit\HealthTest.php" line="17" class="HealthTest" classname="HealthTest" assertions="1" time="0.003626"/>
+>>>>>>> main
       </testsuite>
     </testsuite>
   </testsuite>

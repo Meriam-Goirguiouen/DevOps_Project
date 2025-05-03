@@ -11,9 +11,12 @@ namespace PHPUnit\Framework\Constraint;
 
 use const DIRECTORY_SEPARATOR;
 use const PHP_EOL;
+<<<<<<< HEAD
+=======
 use function array_slice;
 use function array_splice;
 use function count;
+>>>>>>> main
 use function explode;
 use function implode;
 use function preg_match;
@@ -63,6 +66,27 @@ final class StringMatchesFormatDescription extends Constraint
         return 'string matches format description';
     }
 
+<<<<<<< HEAD
+    protected function additionalFailureDescription(mixed $other): string
+    {
+        $from = explode("\n", $this->formatDescription);
+        $to   = explode("\n", $this->convertNewlines($other));
+
+        foreach ($from as $index => $line) {
+            if (isset($to[$index]) && $line !== $to[$index]) {
+                $line = $this->regularExpressionForFormatDescription($line);
+
+                if (preg_match($line, $to[$index]) > 0) {
+                    $from[$index] = $to[$index];
+                }
+            }
+        }
+
+        $from = implode("\n", $from);
+        $to   = implode("\n", $to);
+
+        return $this->differ()->diff($from, $to);
+=======
     /**
      * Returns a useful diff with the 'actual' differences.
      *
@@ -122,13 +146,18 @@ final class StringMatchesFormatDescription extends Constraint
         $outputString   = implode("\n", $output);
 
         return $this->differ()->diff($expectedString, $outputString);
+>>>>>>> main
     }
 
     private function regularExpressionForFormatDescription(string $string): string
     {
+<<<<<<< HEAD
+        $string = strtr(
+=======
         // only add the end of string check ($) for single line comparisons
         $endOfLine = $this->isMultilineMatch($string) ? '' : '$';
         $string    = strtr(
+>>>>>>> main
             preg_quote($string, '/'),
             [
                 '%%' => '%',
@@ -147,7 +176,11 @@ final class StringMatchesFormatDescription extends Constraint
             ],
         );
 
+<<<<<<< HEAD
+        return '/^' . $string . '$/s';
+=======
         return '/^' . $string . $endOfLine . '/s';
+>>>>>>> main
     }
 
     private function convertNewlines(string $text): string
@@ -159,9 +192,12 @@ final class StringMatchesFormatDescription extends Constraint
     {
         return new Differ(new UnifiedDiffOutputBuilder("--- Expected\n+++ Actual\n"));
     }
+<<<<<<< HEAD
+=======
 
     private function isMultilineMatch(string $line): bool
     {
         return preg_match('#%a#i', $line) > 0;
     }
+>>>>>>> main
 }

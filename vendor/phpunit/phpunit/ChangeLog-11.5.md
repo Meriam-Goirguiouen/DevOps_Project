@@ -2,6 +2,8 @@
 
 All notable changes of the PHPUnit 11.5 release series are documented in this file using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+<<<<<<< HEAD
+=======
 ## [11.5.19] - 2025-05-02
 
 ### Added
@@ -29,6 +31,7 @@ All notable changes of the PHPUnit 11.5 release series are documented in this fi
 
 * A "Before Test Method Errored" event is no longer emitted when a test is skipped in a "before test" method
 
+>>>>>>> main
 ## [11.5.17] - 2025-04-08
 
 ### Fixed
@@ -187,8 +190,11 @@ All notable changes of the PHPUnit 11.5 release series are documented in this fi
 * [#6055](https://github.com/sebastianbergmann/phpunit/issues/6055): `assertNotContainsOnly()` (use `assertContainsNotOnlyArray()`, `assertContainsNotOnlyBool()`, `assertContainsNotOnlyCallable()`, `assertContainsNotOnlyFloat()`, `assertContainsNotOnlyInt()`, `assertContainsNotOnlyIterable()`, `assertContainsNotOnlyNumeric()`, `assertContainsNotOnlyObject()`, `assertContainsNotOnlyResource()`, `assertContainsNotOnlyClosedResource()`, `assertContainsNotOnlyScalar()`, or `assertContainsNotOnlyString()` instead)
 * [#6059](https://github.com/sebastianbergmann/phpunit/issues/6059): `containsOnly()` (use `containsOnlyArray()`, `containsOnlyBool()`, `containsOnlyCallable()`, `containsOnlyFloat()`, `containsOnlyInt()`, `containsOnlyIterable()`, `containsOnlyNumeric()`, `containsOnlyObject()`, `containsOnlyResource()`, `containsOnlyClosedResource()`, `containsOnlyScalar()`, or `containsOnlyString()` instead)
 
+<<<<<<< HEAD
+=======
 [11.5.19]: https://github.com/sebastianbergmann/phpunit/compare/11.5.18...11.5.19
 [11.5.18]: https://github.com/sebastianbergmann/phpunit/compare/11.5.17...11.5.18
+>>>>>>> main
 [11.5.17]: https://github.com/sebastianbergmann/phpunit/compare/11.5.16...11.5.17
 [11.5.16]: https://github.com/sebastianbergmann/phpunit/compare/11.5.15...11.5.16
 [11.5.15]: https://github.com/sebastianbergmann/phpunit/compare/11.5.14...11.5.15

@@ -29,7 +29,11 @@
         "ext-mbstring": "*",
         "ext-xml": "*",
         "ext-xmlwriter": "*",
+<<<<<<< HEAD
+        "myclabs/deep-copy": "^1.13.0",
+=======
         "myclabs/deep-copy": "^1.13.1",
+>>>>>>> main
         "phar-io/manifest": "^2.0.4",
         "phar-io/version": "^3.2.1",
         "phpunit/php-code-coverage": "^11.0.9",
@@ -53,7 +57,10 @@
         "platform": {
             "php": "8.2.0"
         },
+<<<<<<< HEAD
+=======
         "classmap-authoritative": true,
+>>>>>>> main
         "optimize-autoloader": true,
         "sort-packages": true
     },

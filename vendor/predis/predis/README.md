@@ -7,14 +7,22 @@
 [![Build status][ico-build]][link-actions]
 [![Coverage Status][ico-coverage]][link-coverage]
 
+<<<<<<< HEAD
+A flexible and feature-complete [Redis](http://redis.io) client for PHP 7.2 and newer.
+=======
 A flexible and feature-complete [Redis](http://redis.io) / [Valkey](https://github.com/valkey-io/valkey) client for PHP 7.2 and newer.
+>>>>>>> main
 
 More details about this project can be found on the [frequently asked questions](FAQ.md).
 
 
 ## Main features ##
 
+<<<<<<< HEAD
+- Support for Redis from __3.0__ to __7.4__.
+=======
 - Support for Redis from __3.0__ to __8.0__.
+>>>>>>> main
 - Support for clustering using client-side sharding and pluggable keyspace distributors.
 - Support for [redis-cluster](http://redis.io/topics/cluster-tutorial) (Redis >= 3.0).
 - Support for master-slave replication setups and [redis-sentinel](http://redis.io/topics/sentinel).

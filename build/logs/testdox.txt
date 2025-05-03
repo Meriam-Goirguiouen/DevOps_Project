@@ -29,7 +29,16 @@ Facture Model (App\Tests\Models\FactureModel)
 Health
  [x] Is defined app path
  [x] Base url has been set
- 
+
+
+Ligne Bon Model (App\Tests\Models\LigneBonModel)
+ [x] Find all lignes bon l
+ [x] Insert lignes bon l
+ [x] Update ligne bon l
+
+User Model (App\Tests\Models\UserModel)
+ [x] Dind all users
+
 User Model (App\Tests\Models\UserModel)
  [x] Find all users
  [x] Insert user

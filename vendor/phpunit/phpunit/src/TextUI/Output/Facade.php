@@ -206,16 +206,27 @@ final class Facade
                 self::$printer,
                 true,
                 true,
+<<<<<<< HEAD
+                $configuration->displayDetailsOnPhpunitDeprecations(),
+=======
                 $configuration->displayDetailsOnPhpunitDeprecations() || $configuration->displayDetailsOnAllIssues(),
+>>>>>>> main
                 false,
                 false,
                 true,
                 false,
                 false,
+<<<<<<< HEAD
+                $configuration->displayDetailsOnTestsThatTriggerDeprecations(),
+                $configuration->displayDetailsOnTestsThatTriggerErrors(),
+                $configuration->displayDetailsOnTestsThatTriggerNotices(),
+                $configuration->displayDetailsOnTestsThatTriggerWarnings(),
+=======
                 $configuration->displayDetailsOnTestsThatTriggerDeprecations() || $configuration->displayDetailsOnAllIssues(),
                 $configuration->displayDetailsOnTestsThatTriggerErrors() || $configuration->displayDetailsOnAllIssues(),
                 $configuration->displayDetailsOnTestsThatTriggerNotices() || $configuration->displayDetailsOnAllIssues(),
                 $configuration->displayDetailsOnTestsThatTriggerWarnings() || $configuration->displayDetailsOnAllIssues(),
+>>>>>>> main
                 $configuration->reverseDefectList(),
             );
         }
@@ -241,6 +252,18 @@ final class Facade
             self::$printer,
             true,
             true,
+<<<<<<< HEAD
+            $configuration->displayDetailsOnPhpunitDeprecations(),
+            true,
+            true,
+            true,
+            $configuration->displayDetailsOnIncompleteTests(),
+            $configuration->displayDetailsOnSkippedTests(),
+            $configuration->displayDetailsOnTestsThatTriggerDeprecations(),
+            $configuration->displayDetailsOnTestsThatTriggerErrors(),
+            $configuration->displayDetailsOnTestsThatTriggerNotices(),
+            $configuration->displayDetailsOnTestsThatTriggerWarnings(),
+=======
             $configuration->displayDetailsOnPhpunitDeprecations() || $configuration->displayDetailsOnAllIssues(),
             true,
             true,
@@ -251,6 +274,7 @@ final class Facade
             $configuration->displayDetailsOnTestsThatTriggerErrors() || $configuration->displayDetailsOnAllIssues(),
             $configuration->displayDetailsOnTestsThatTriggerNotices() || $configuration->displayDetailsOnAllIssues(),
             $configuration->displayDetailsOnTestsThatTriggerWarnings() || $configuration->displayDetailsOnAllIssues(),
+>>>>>>> main
             $configuration->reverseDefectList(),
         );
     }

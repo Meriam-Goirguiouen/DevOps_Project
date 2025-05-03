@@ -303,8 +303,11 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyArray')) {
     /**
      * Asserts that a haystack contains only values of type array.
      *
+<<<<<<< HEAD
+=======
      * @phpstan-assert iterable<array<mixed>> $haystack
      *
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws ExpectationFailedException
@@ -323,8 +326,11 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyBool')) {
     /**
      * Asserts that a haystack contains only values of type bool.
      *
+<<<<<<< HEAD
+=======
      * @phpstan-assert iterable<bool> $haystack
      *
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws ExpectationFailedException
@@ -343,8 +349,11 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyCallable')) {
     /**
      * Asserts that a haystack contains only values of type callable.
      *
+<<<<<<< HEAD
+=======
      * @phpstan-assert iterable<callable> $haystack
      *
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws ExpectationFailedException
@@ -363,8 +372,11 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyFloat')) {
     /**
      * Asserts that a haystack contains only values of type float.
      *
+<<<<<<< HEAD
+=======
      * @phpstan-assert iterable<float> $haystack
      *
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws ExpectationFailedException
@@ -383,8 +395,11 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyInt')) {
     /**
      * Asserts that a haystack contains only values of type int.
      *
+<<<<<<< HEAD
+=======
      * @phpstan-assert iterable<int> $haystack
      *
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws ExpectationFailedException
@@ -403,8 +418,11 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyIterable')) {
     /**
      * Asserts that a haystack contains only values of type iterable.
      *
+<<<<<<< HEAD
+=======
      * @phpstan-assert iterable<iterable<mixed>> $haystack
      *
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws ExpectationFailedException
@@ -423,8 +441,11 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyNull')) {
     /**
      * Asserts that a haystack contains only values of type null.
      *
+<<<<<<< HEAD
+=======
      * @phpstan-assert iterable<null> $haystack
      *
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws ExpectationFailedException
@@ -443,8 +464,11 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyNumeric')) {
     /**
      * Asserts that a haystack contains only values of type numeric.
      *
+<<<<<<< HEAD
+=======
      * @phpstan-assert iterable<numeric> $haystack
      *
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws ExpectationFailedException
@@ -463,8 +487,11 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyObject')) {
     /**
      * Asserts that a haystack contains only values of type object.
      *
+<<<<<<< HEAD
+=======
      * @phpstan-assert iterable<object> $haystack
      *
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws ExpectationFailedException
@@ -483,8 +510,11 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyResource')) {
     /**
      * Asserts that a haystack contains only values of type resource.
      *
+<<<<<<< HEAD
+=======
      * @phpstan-assert iterable<resource> $haystack
      *
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws ExpectationFailedException
@@ -503,8 +533,11 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyClosedResource')) {
     /**
      * Asserts that a haystack contains only values of type closed resource.
      *
+<<<<<<< HEAD
+=======
      * @phpstan-assert iterable<resource> $haystack
      *
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws ExpectationFailedException
@@ -523,8 +556,11 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyScalar')) {
     /**
      * Asserts that a haystack contains only values of type scalar.
      *
+<<<<<<< HEAD
+=======
      * @phpstan-assert iterable<scalar> $haystack
      *
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws ExpectationFailedException
@@ -543,8 +579,11 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyString')) {
     /**
      * Asserts that a haystack contains only values of type string.
      *
+<<<<<<< HEAD
+=======
      * @phpstan-assert iterable<string> $haystack
      *
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws ExpectationFailedException
@@ -563,11 +602,15 @@ if (!function_exists('PHPUnit\Framework\assertContainsOnlyInstancesOf')) {
     /**
      * Asserts that a haystack contains only instances of a specified interface or class name.
      *
+<<<<<<< HEAD
+     * @param class-string    $className
+=======
      * @template T
      *
      * @phpstan-assert iterable<T> $haystack
      *
      * @param class-string<T> $className
+>>>>>>> main
      * @param iterable<mixed> $haystack
      *
      * @throws Exception

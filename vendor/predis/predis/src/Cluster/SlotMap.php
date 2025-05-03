@@ -4,7 +4,11 @@
  * This file is part of the Predis package.
  *
  * (c) 2009-2020 Daniele Alessandri
+<<<<<<< HEAD
+ * (c) 2021-2024 Till Krüss
+=======
  * (c) 2021-2025 Till Krüss
+>>>>>>> main
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -22,6 +26,13 @@ use ReturnTypeWillChange;
 use Traversable;
 
 /**
+<<<<<<< HEAD
+ * Slot map for redis-cluster.
+ */
+class SlotMap implements ArrayAccess, IteratorAggregate, Countable
+{
+    private $slots = [];
+=======
  * Compact slot map for redis-cluster.
  */
 class SlotMap implements ArrayAccess, IteratorAggregate, Countable
@@ -32,6 +43,7 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
      * @var SlotRange[]
      */
     private $slotRanges = [];
+>>>>>>> main
 
     /**
      * Checks if the given slot is valid.
@@ -42,7 +54,11 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
      */
     public static function isValid($slot)
     {
+<<<<<<< HEAD
+        return $slot >= 0x0000 && $slot <= 0x3FFF;
+=======
         return $slot >= 0 && $slot <= SlotRange::MAX_SLOTS;
+>>>>>>> main
     }
 
     /**
@@ -55,7 +71,11 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
      */
     public static function isValidRange($first, $last)
     {
+<<<<<<< HEAD
+        return $first >= 0x0000 && $first <= 0x3FFF && $last >= 0x0000 && $last <= 0x3FFF && $first <= $last;
+=======
         return SlotRange::isValidRange($first, $last);
+>>>>>>> main
     }
 
     /**
@@ -63,7 +83,11 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
      */
     public function reset()
     {
+<<<<<<< HEAD
+        $this->slots = [];
+=======
         $this->slotRanges = [];
+>>>>>>> main
     }
 
     /**
@@ -73,7 +97,11 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
      */
     public function isEmpty()
     {
+<<<<<<< HEAD
+        return empty($this->slots);
+=======
         return empty($this->slotRanges);
+>>>>>>> main
     }
 
     /**
@@ -85,6 +113,9 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
      */
     public function toArray()
     {
+<<<<<<< HEAD
+        return $this->slots;
+=======
         return array_reduce(
             $this->slotRanges,
             function ($carry, $slotRange) {
@@ -92,6 +123,7 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
             },
             []
         );
+>>>>>>> main
     }
 
     /**
@@ -101,6 +133,9 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
      */
     public function getNodes()
     {
+<<<<<<< HEAD
+        return array_keys(array_flip($this->slots));
+=======
         return array_unique(array_map(
             function ($slotRange) {
                 return $slotRange->getConnection();
@@ -117,6 +152,7 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
     public function getSlotRanges()
     {
         return $this->slotRanges;
+>>>>>>> main
     }
 
     /**
@@ -134,6 +170,9 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
             throw new OutOfBoundsException("Invalid slot range $first-$last for `$connection`");
         }
 
+<<<<<<< HEAD
+        $this->slots += array_fill($first, $last - $first + 1, (string) $connection);
+=======
         $targetSlotRange = new SlotRange($first, $last, (string) $connection);
 
         // Get gaps of slot ranges list.
@@ -159,6 +198,7 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
         $results = $this->compactSlotRanges($results);
 
         $this->slotRanges = $results;
+>>>>>>> main
     }
 
     /**
@@ -167,7 +207,11 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
      * @param int $first Initial slot of the range.
      * @param int $last  Last slot of the range.
      *
+<<<<<<< HEAD
+     * @return array
+=======
      * @return array<int, string>
+>>>>>>> main
      */
     public function getSlots($first, $last)
     {
@@ -175,6 +219,9 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
             throw new OutOfBoundsException("Invalid slot range $first-$last");
         }
 
+<<<<<<< HEAD
+        return array_intersect_key($this->slots, array_fill($first, $last - $first + 1, null));
+=======
         $placeHolder = new NullSlotRange($first, $last);
 
         $intersections = [];
@@ -197,6 +244,7 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
             },
             []
         );
+>>>>>>> main
     }
 
     /**
@@ -209,7 +257,11 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
     #[ReturnTypeWillChange]
     public function offsetExists($slot)
     {
+<<<<<<< HEAD
+        return isset($this->slots[$slot]);
+=======
         return $this->findRangeBySlot($slot) !== false;
+>>>>>>> main
     }
 
     /**
@@ -222,9 +274,13 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
     #[ReturnTypeWillChange]
     public function offsetGet($slot)
     {
+<<<<<<< HEAD
+        return $this->slots[$slot] ?? null;
+=======
         $found = $this->findRangeBySlot($slot);
 
         return $found ? $found->getConnection() : null;
+>>>>>>> main
     }
 
     /**
@@ -242,8 +298,12 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
             throw new OutOfBoundsException("Invalid slot $slot for `$connection`");
         }
 
+<<<<<<< HEAD
+        $this->slots[(int) $slot] = (string) $connection;
+=======
         $this->offsetUnset($slot);
         $this->setSlots($slot, $slot, $connection);
+>>>>>>> main
     }
 
     /**
@@ -256,6 +316,9 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
     #[ReturnTypeWillChange]
     public function offsetUnset($slot)
     {
+<<<<<<< HEAD
+        unset($this->slots[$slot]);
+=======
         if (!static::isValid($slot)) {
             throw new OutOfBoundsException("Invalid slot $slot");
         }
@@ -276,6 +339,7 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
         }
 
         $this->slotRanges = $results;
+>>>>>>> main
     }
 
     /**
@@ -286,12 +350,16 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
     #[ReturnTypeWillChange]
     public function count()
     {
+<<<<<<< HEAD
+        return count($this->slots);
+=======
         return array_sum(array_map(
             function ($slotRange) {
                 return $slotRange->count();
             },
             $this->slotRanges
         ));
+>>>>>>> main
     }
 
     /**
@@ -302,6 +370,9 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
     #[ReturnTypeWillChange]
     public function getIterator()
     {
+<<<<<<< HEAD
+        return new ArrayIterator($this->slots);
+=======
         return new ArrayIterator($this->toArray());
     }
 
@@ -413,5 +484,6 @@ class SlotMap implements ArrayAccess, IteratorAggregate, Countable
         }
 
         return array_values($compacted);
+>>>>>>> main
     }
 }
