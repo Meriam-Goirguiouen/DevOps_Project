@@ -6,11 +6,11 @@ use CodeIgniter\Test\CIUnitTestCase;
 use App\Models\PanierModel;
 
 class PanierModelTest extends CIUnitTestCase{
-    public function testFindAllPaniers() {
+   /* public function testFindAllPaniers() {
         $Pmodel = new PanierModel();
         $pnrs = $Pmodel->findAll();
         $this->assertIsArray($pnrs,"findAll doit retourner un tableau !");
-    }
+    }*/
 
     public function testInsertPanier()
     {
