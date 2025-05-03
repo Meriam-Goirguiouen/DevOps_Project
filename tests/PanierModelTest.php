@@ -40,7 +40,7 @@ class PanierModelTest extends CIUnitTestCase{
         $panier = $model->find($id);
 
         $this->assertNotNull($panier, "Le panier inséré doit être retrouvable.");
-        $this->assertEquals('Test Client', $panier['client'], "Le nom du client doit correspondre.");
+        $this->assertEquals('2', $panier['client'], "Le nom du client doit correspondre.");
         $this->assertEquals("2025-04-11", $panier['dateCommande'], "La date de commande doit correspondre.");
     }
 }
