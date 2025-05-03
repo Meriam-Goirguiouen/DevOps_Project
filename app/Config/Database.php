@@ -26,9 +26,9 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => '172.0.0.1',  // Utilise l'IP de ton conteneur Docker MySQL
+        'hostname' => '127.0.0.1',  // Utilise l'IP de ton conteneur Docker MySQL
         'username' => 'root',
-        'password' => 'secret123',
+        'password' => '',
         'database' => 'devops_tp',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
@@ -155,7 +155,7 @@ class Database extends Config
      */
     public array $tests = [
         'DSN'          => '',
-        'hostname'     => '172.0.0.1',  // Utilise aussi l'IP pour les tests si nécessaire
+        'hostname'     => '127.0.0.1',  
         'username'     => 'root',
         'password'     => '',
         'database'     => 'devops_tp',
