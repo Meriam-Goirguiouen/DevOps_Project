@@ -20,7 +20,6 @@ class BonLivraisonModelTest extends CIUnitTestCase
         $data = [
             'dateCommande' => date('Y-m-d'),
             'idclient' => 1,
-            // 'etat' => 'en cours'
         ];
 
         $id = $this->bonModel->insert($data);
@@ -34,7 +33,6 @@ class BonLivraisonModelTest extends CIUnitTestCase
         $data = [
             'dateCommande' => date('Y-m-d'),
             'idclient' => 2,
-            // 'etat' => 'en cours'
         ];
 
         $id = $this->bonModel->insert($data);
@@ -42,7 +40,8 @@ class BonLivraisonModelTest extends CIUnitTestCase
         $result = $this->bonModel->find($id);
 
         $this->assertNotNull($result);
-        $this->assertEquals($data['idclient'], $result['dateCommande']);
+        $this->assertEquals($data['idclient'], $result['idclient']); 
+        $this->assertEquals($data['dateCommande'], $result['dateCommande']); 
     }
 
     public function testUpdateBonLivraison()
@@ -50,13 +49,15 @@ class BonLivraisonModelTest extends CIUnitTestCase
         $id = $this->bonModel->insert([
             'dateCommande' => date('Y-m-d'),
             'idclient' => 3,
-            // 'etat' => 'en cours'
         ]);
 
-        // $this->bonModel->update($id, ['etat' => 'livré']);
+        // On met à jour le client
+        $this->bonModel->update($id, ['idclient' => 99]);
+
         $updated = $this->bonModel->find($id);
 
-        // $this->assertEquals('livré', $updated['etat']);
+        $this->assertNotNull($updated);
+        $this->assertEquals(99, $updated['idclient']); 
     }
 
     public function testDeleteBonLivraison()
@@ -64,7 +65,6 @@ class BonLivraisonModelTest extends CIUnitTestCase
         $id = $this->bonModel->insert([
             'dateCommande' => date('Y-m-d'),
             'idclient' => 4,
-            // 'etat' => 'en cours'
         ]);
 
         $this->bonModel->delete($id);
