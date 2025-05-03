@@ -6,7 +6,7 @@ use CodeIgniter\Test\CIUnitTestCase;
 use App\Models\PanierModel;
 
 class PanierModelTest extends CIUnitTestCase{
-   /*
+
    /* public function testFindAllPaniers() {
         $Pmodel = new PanierModel();
         $pnrs = $Pmodel->findAll();
@@ -43,6 +43,6 @@ class PanierModelTest extends CIUnitTestCase{
         $this->assertNotNull($panier, "Le panier inséré doit être retrouvable.");
         $this->assertEquals('2', $panier['client'], "Le nom du client doit correspondre.");
         $this->assertEquals("2025-04-11", $panier['dateCommande'], "La date de commande doit correspondre.");
-    }
-}*/
+    }*/
+}
 ?>
