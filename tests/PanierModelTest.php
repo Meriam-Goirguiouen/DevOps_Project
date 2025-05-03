@@ -18,7 +18,7 @@ class PanierModelTest extends CIUnitTestCase{
 
         $data = [
             'dateCommande' => "2025-04-22",
-            'client' => 'Karima',
+            'client' => '1',
         ];
 
         $id = $model->insert($data);
@@ -32,7 +32,7 @@ class PanierModelTest extends CIUnitTestCase{
 
         $data = [
             'dateCommande' => "2025-04-11",
-            'client' => 'TestC',
+            'client' => '2',
         ];
 
         $id = $model->insert($data);
