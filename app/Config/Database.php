@@ -39,6 +39,7 @@ class Database extends Config
         'compress' => false,
         'stricton' => false,
         'failover' => [],
+        'charset'  => 'utf8mb4',
         'save_queries' => true,
     ];
 
@@ -172,6 +173,7 @@ class Database extends Config
         'failover'     => [],
         'port'         => 3306,
         'numberNative' => false,
+        'charset'  => 'utf8mb4',
         'foundRows'    => false,
         'dateFormat'   => [
             'date'     => 'Y-m-d',
