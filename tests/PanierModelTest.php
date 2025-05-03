@@ -1,4 +1,4 @@
-<?php /*
+<?php 
 
 namespace App\Tests\Models;
 
@@ -6,6 +6,7 @@ use CodeIgniter\Test\CIUnitTestCase;
 use App\Models\PanierModel;
 
 class PanierModelTest extends CIUnitTestCase{
+   /*
    /* public function testFindAllPaniers() {
         $Pmodel = new PanierModel();
         $pnrs = $Pmodel->findAll();
