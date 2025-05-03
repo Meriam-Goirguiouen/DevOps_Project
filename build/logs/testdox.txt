@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 Article Model (App\Tests\Models\ArticleModel)
  [x] Valid article insertion
  [x] Missing fields should fail
@@ -16,7 +14,6 @@ Bon Livraison Model (App\Tests\Models\BonLivraisonModel)
  [x] Update bon livraison
  [x] Delete bon livraison
 
->>>>>>> main
 Example Database
  [x] Model find all
  [x] Soft delete leaves row
@@ -24,19 +21,16 @@ Example Database
 Example Session
  [x] Session simple
 
-<<<<<<< HEAD
 Facture Model (App\Tests\Models\FactureModel)
  [x] Find all factures
  [x] Insert facture
  [x] Find by id facture
 
-=======
->>>>>>> main
 Health
  [x] Is defined app path
  [x] Base url has been set
 
-<<<<<<< HEAD
+
 Ligne Bon Model (App\Tests\Models\LigneBonModel)
  [x] Find all lignes bon l
  [x] Insert lignes bon l
@@ -44,9 +38,12 @@ Ligne Bon Model (App\Tests\Models\LigneBonModel)
 
 User Model (App\Tests\Models\UserModel)
  [x] Dind all users
-=======
+
 User Model (App\Tests\Models\UserModel)
  [x] Find all users
->>>>>>> main
+ [x] Insert user
+
+User Model (App\Tests\Models\UserModel)
+ [x] Dind all users
  [x] Insert user
 
