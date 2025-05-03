@@ -2,9 +2,10 @@
 namespace App\Tests\Models;
 use PHPUnit\Framework\TestCase;
 use App\Models\UserModel;
+use CodeIgniter\Model;
   
  class UserModelTest extends TestCase{
-    public function testDindAllUsers(){
+    public function testFindAllUsers(){
         $model = new UserModel();
         $users = $model->findAll();
 
